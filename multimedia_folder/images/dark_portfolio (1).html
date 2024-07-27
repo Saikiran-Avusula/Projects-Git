@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Potfolio Template</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        header {
+            border: 1px solid;
+            width: 7vw;
+            height: 910px;
+            margin-left: -1%;
+            margin-top: -1%;
+            background-color: black;
+            position: fixed;
+            /* here nav bar fixed with postion fixed with align elements to left side */
+        }
+        .navimg {
+            /* nav bar logo of image */
+            /* image size set to 100% WIDTH OF THE NAV BAR SIZE, HEIGHT IS DEFAULT OFI IMAGE*/
+            width: 100%;
+            display: flex;
+            /* flex-direction: ; */
+            
+        }
+        .home, .about, .photos, .contact {
+            background-color: white;
+            border: 2px solid white;
+            width: 97%;
+            height: 100px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover; 
+        }
+        .main_border{
+            border: 2px solid;
+            margin-left: 8%;
+            height: 1280%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: black;
+        }
+        .person_name {
+            /* border: 2px solid; */
+            margin-top: 3%;
+            height: 50%;
+            font-size: 64px;
+            /* text-align: center; */
+            font-family: Montserrat, sans-serif;
+            color: white;
+            
+        }
+        .person_designation {
+            /* border: 2px solid; */
+            margin-top: -8%;
+            /* text-align: center; */
+            font-size: 15px;
+            font-family: Montserrat, sans-serif;
+            color: white;
+            
+        }
+        .person_img {
+            border: 2px solid;
+            height: 1100px;
+            width: 55vw;
+        }
+        .section1_border {
+            border: 2px solid;
+            margin-left: 24.1%;
+            background-color: black;
+            width: 58.5vw;
+            /* Height %, will be given when the border content is of lesser than the above main section So, will default set to height we just the device size */
+            height: 800%;
+            /* display: flex;
+            justify-content: center; */
+            font-family: Montserrat, sans-serif;
+        }
+        .my_name_headname {
+            color: white;
+            background-color: black;
+            font-size: 30px;
+            font-weight: 300;
+        }
+        hr {
+            border: 1px solid white;
+            width: 10vw;
+            margin-left: .1vw;
+            margin-top: -15px;
+        }
+        .my_name_bio {
+            background-color: black;
+            color:#757575;
+            font-size: 15px;
+            text-align: justify;
+            line-height: 20px;
+        }
+        .my_skills_headname, .my_price_headname, .my_reputation_headname, .contact_me_headname{
+            margin-top: 4%;
+            color: white;
+            font-size: 30px;
+            font-weight: 300;
+            background-color: black;
+        }
+        .photography_bar_border, .web_design_bar_border, .photoshop_bar_boder{
+            background-color: white;
+            border: 1px solid;
+            height: 40px;
+        }
+        .photography_bar{
+            border: 1px solid;
+            width: 55vw;
+            background-color: #616161;
+            height: 40px;
+        }
+        .web_design_bar{
+            border: 1px solid;
+            width: 50vw;
+            background-color: #616161;
+            height: 40px;
+        }
+        .photoshop_bar{
+            border: 1px solid;
+            width: 45vw;
+            background-color: #616161;
+            height: 40px;
+        }
+        .progress_tab {
+            border: 2px solid black;
+            background-color: white;
+            height: 150px;
+            margin-top: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            
+        }
+        .partners,
+        .project_done, 
+        .happy_clients, 
+        .meetings
+        {   
+            /* border: 1px solid; */
+            color: black;
+            height: 150px;
+            width: 10vw;
+            display: flex;
+            font-size: 20px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: Montserrat, sans-serif;
+        }
+        .download {
+            border: 1px solid;
+            margin-top: 5%;
+            width: 10vw;
+            height: 100%;
+            font-size: 15px;
+            font-family: Montserrat, sans-serif;
+        }
+        .price_tab_border{
+            border: 1px solid;
+            display: flex;
+            justify-content:center;
+            align-items:center;
+            gap: 20px;
+        }
+        .basic, .pro {
+            border: 1px solid black;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .h2_basic, .h2_pro{
+            /* border: 1px solid black; */
+            background-color: #616161;
+            color: white;
+            text-align: center;
+            margin-top: -7%;
+            height: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            font-weight: 200;
+        }
+
+        .web_design_basic, .photography_basic, .storage_basic, .support_basic, .signup{
+            color:  #757575;
+            margin-top: -5%;
+            /* border: 1px solid; */
+            height: 50px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .web_design_pro, .photography_pro, .storage_pro, .support_pro ,.signup{
+            color:  #757575;
+            margin-top: -5%;
+            /* border: 1px solid; */
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .signup {
+            border: 1px solid;
+            text-align: center;
+            height: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background-color: #f1f1f1;
+        }
+        button {
+            border: 1px solid;
+            width: 5.5vw;
+            height: 50px;
+            font-size: 18px;
+            font-family: Montserrat, sans-serif;
+        }
+        button:hover {
+            background-color: black;
+            color: white;
+        }
+        .image_clip1_info {
+            /* border: 1px solid; */
+            color:  #757575;
+            background-color: black;
+            width: 30vw;
+            height: 10vh;
+            display: flex;
+            flex-direction: column;
+            margin-left: -2%;
+        }
+        .image_clip1_group {
+            color:  #757575;
+            display: flex;
+            align-items: center;
+            margin-top: -2%;
+        }
+        .image_clip1, .image_clip2 {
+            margin-left: -2.8%;
+            clip-path: circle(30%);
+        }
+        .image_clip2_group {
+            display: flex;
+            align-items: center;
+            color: white;
+            background-color: black;
+            width: 100%;
+            margin-top: -6%;
+        }
+        .image_clip2 {
+            margin-left: -6.5%;
+            clip-path:circle(20%) ;
+        }
+        .image_clip2_info {
+            /* border: 1px solid; */
+            color:  #757575;
+            width: 30vw;
+            height: 10vh;
+            display: flex;
+            flex-direction: column;
+            margin-left: -5%;
+        }
+        .photography_gallery{
+            border: 1px solid;
+            background-color: black;
+            width: 58.5vw;
+            height: 100%;
+            display: flex;
+            gap: 20px;
+        }
+        .image1, .image3{
+            width: 28vw;
+        }
+        .image2 {
+            width: 28vw;
+            height: 900px;
+        }
+        .image4 {
+            width: 100%;
+        }
+        .image5, .image6 ,.image7{
+            width: 100%;
+            height: 360px;
+        }
+        /* section contact me */
+        .contact_me{
+            border: 1px solid;
+            width: 58.5vw;
+            margin-top: 10%;
+            height: 100%;
+        }
+        input {
+            width: 99.5%;
+            height: 50px;
+            font-size: 18px;
+        }
+        button{
+            color: black; 
+            background-color: white;
+            font-size: 18px;
+            height: 50;
+            width: 20%;
+
+        }
+    </style>
+</head>
+<body">
+    <header>
+        <nav>
+            <div>
+                <img  class="navimg" id="home" src="../CSS_git_tasks/multimedia_folder/images/avatar_smoke_nav.jpg" alt="avatar_smoke_nav">
+            </div>
+            <div class="nav_menu">
+                <div><a href="#home"><img class="home" src="../CSS_git_tasks/multimedia_folder/images/icons8-home-26.png" alt="icons8-home-26"></a></div>
+                <div></div><a href="#about"><img class="about" src="../CSS_git_tasks/multimedia_folder/images/icons8-home-26.png" alt=""></a></div>
+                <div><a href="#photos"><img class="photos" src="../CSS_git_tasks/multimedia_folder/images/icons8-home-26.png" alt=""></a></div>
+                <div><a href="#contact"><img class="contact" src="../CSS_git_tasks/multimedia_folder/images/icons8-home-26.png" alt=""></a></div>
+            </div>    
+        </nav>
+    </header>
+
+    <main>
+        <div class="main_border">
+            <div><p class="person_name">I'm John Doe.</p></div>
+            <div><p  class="person_designation">Photographer and Web Designer.</p></div>
+            <div><img class="person_img" src="../CSS_git_tasks/multimedia_folder/images/man_smoke.jpg" alt="man_smoke"></div>
+        </div>
+    </main>
+<!-- section 1 -->
+    <section class="section1_border">
+        <div class="my_name_border">
+            <div><h3 class="my_name_headname">My Name</h3><hr></div>
+            <div><p class="my_name_bio">Some text about me. Some text about me. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
+                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum 
+                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <!--  for my sills -->
+            <div>
+                <h3 class="my_skills_headname">My Skils</h3>
+                <p style="font-size: 15px; letter-spacing: 7px; color: #757575; background-color: black;">Photography</p>
+                <div class="photography_bar_border">
+                    <div class="photography_bar"></div>
+                </div>
+                <p style="font-size: 15px; letter-spacing: 7px; color:  #757575; background-color: black;">Web Design</p>
+                <div class="web_design_bar_border">
+                    <div class="web_design_bar"></div>
+                </div>
+                <p style="font-size: 15px; letter-spacing: 7px; color:  #757575; background-color: black;">Phtotshop</p>
+                <div class="photoshop_bar_boder">
+                    <div class="photoshop_bar"></div>
+                </div>
+
+                <div class="progress_tab">
+                    <div><p class="partners">11+ <br>Partners</p></div>
+                    <div><p class="project_done">55+ <br>Project Done</p></div>
+                    <div><p class="happy_clients">89+ <br>Happy Clients</p></div>
+                    <div><p class="meetings"> 150+ <br> Meetings</p></div>
+                </div>
+                 <div class="download">
+                    <p><img class="dwld_icon" src="../CSS_git_tasks/multimedia_folder/images/download.svg" width="15px" height="15px" alt="download"> Download Resume</p>
+                </div>
+            </div>
+
+            <!-- for my price -->
+            <div>
+                    <h3 class="my_price_headname">My Price</h3>
+                <div class="price_tab_border">
+                    <div class="basic">
+                        <p><h2 class="h2_basic">Basic</h2></p>
+                        <p class="web_design_basic">Web Design</p>
+                        <p class="photography_basic">Phtotgraphy</p>
+                        <p class="storage_basic">5GB Storage</p>
+                        <p class="support_basic">Endless Support</p>
+                        <p><h2 style="text-align: center; font-weight: 200; margin-top: -2%;">$ 10 <br> per month</h2></p>
+                        <div class="signup">
+                            <button>Sign up</button>
+                        </div>
+                        
+                    </div>
+                    <div class="pro">
+                        <p><h2 class="h2_pro">Pro</h2></p>
+                        <p class="web_design_pro">Web Design</p>
+                        <p class="photography_pro">Phtotgraphy</p>
+                        <p class="storage_pro">5GB Storage</p>
+                        <p class="support_pro">Endless Support</p>
+                        <p><h2 style="text-align: center; font-weight: 200;margin-top: -2%">$ 10 <br> per month</h2></p>
+                            <div class="signup">
+                                <button>Sign up</button>
+                            </div>
+                    </div>
+                </div>    
+            </div>
+
+            <!-- for my reputation -->
+            <div>
+                <h3 class="my_reputation_headname">My reputation</h3>
+
+                <div class="image_clip1_group">
+                    <img class="image_clip1" src="../CSS_git_tasks/multimedia_folder/images/bandmember.jpg"  width="150px" height="150px" alt="bandmember">
+                    <div class="image_clip1_info">    
+                        <p>Chris Fox. &emsp; CEO at Hooli.</p>
+                        <p>John Doe saved us from a web disaster.</p>
+                    </div>    
+                </div>
+
+                <div class="image_clip2_group">
+                    <img class="image_clip2"  src="../CSS_git_tasks/multimedia_folder/images/avatar_g2.jpg" width="220px" height="220px" alt="avatar_g2">
+                    <div class="image_clip2_info"> 
+                        <p>Rebecca Flex. &emsp; CEO at Company.</p>
+                        <p>No one is better than John Doe.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- my photos section -->
+            <section>
+                <div>
+                    <h3 class="my_reputation_headname">My Photos</h3> <hr>
+                    <div class="photography_gallery">
+                        <div>
+                            <div><img class="image1" src="../CSS_git_tasks/multimedia_folder/images/wedding.jpg" alt="wedding"></div>
+                            <div><img class="image2" src="../CSS_git_tasks/multimedia_folder/images/rocks.jpg"  alt="underwater"></div>
+                            <div><img class="image3" src="../CSS_git_tasks/multimedia_folder/images/sailboat.jpg" alt="sailboat"></div>
+                        </div>
+                        <div>
+                            <div><img class="image4" src="../CSS_git_tasks/multimedia_folder/images/underwater.jpg" alt="underwater"></div>
+                            <div><img class="image5" src="../CSS_git_tasks/multimedia_folder/images/chef.jpg" alt="chef"></div>
+                            <div><img class="image6" src="../CSS_git_tasks/multimedia_folder/images/wedding.jpg" alt="wedding"></div>
+                            <div><img class="image7" src="../CSS_git_tasks/multimedia_folder/images/p6.jpg" alt="p6"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- contact me section -->
+            <section>
+                <div class="contact_me">
+                    <h3 class="contact_me_headname">Contact Me</h3> <hr>
+                    <p style="color: white;"><img src="../CSS_git_tasks/multimedia_folder/images/download.svg" width="15px" height="15px" alt="download">  Chicago, US</p>
+                    <p style="color: white;"><img src="../CSS_git_tasks/multimedia_folder/images/download.svg" width="15px" height="15px" alt="download">  Phone: +00 151515</p>
+                    <p style="color: white;"><img src="../CSS_git_tasks/multimedia_folder/images/download.svg" width="15px" height="15px" alt="download">  Email: mail@mail.com</p>
+                </div>
+
+                <div class="input_form">
+                    <div class="form">
+                        <form action="">
+                            <input type="text" placeholder="Name"> <br><br>
+                            <input type="email" placeholder="Email"> <br><br>
+                            <input type="text" placeholder="Subject"> <br><br>
+                            <input type="text" placeholder="Message"><br><br><br>
+                            <button>SEND MESSAGE</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+</body>
+</html>
