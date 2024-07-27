@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food-template</title>
+    <style>
+        
+        .nav {
+            /* border: 2px solid; */
+            background-color: white;
+            font-family: Verdana, sans-serif;
+            display: flex;
+            justify-content: space-evenly;
+            font-size: 24px;
+            font-weight: 50;
+            position: fixed;
+            width: 100%;
+            margin-top: -1%;
+            z-index: 2;
+        }
+        .icon{
+            width: 20px;
+            height: 2px;
+            background-color: black;
+            margin: 6px;
+        }
+        .menu {
+            margin-top: 2% ;
+            margin-left: -12%;
+        }
+        p {
+            margin-top: 1.5%;
+            margin-right: -5%;
+        }
+        .bmain {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        img {
+            width: 13.9vw;
+            height: 45vh;
+        }
+        .gallery {
+            width: 58.5vw;
+            height: 65vh;
+            top: 16vh;
+            z-index: 1;
+            display: flex;
+            gap: .8vw;
+            font-weight: 100;
+        }
+        .about {
+            border: 2px solid;
+            width: 58.5vw;
+            height: 65vh;
+            position: relative;
+            top: 35vh;
+            margin-left: 17.5vw;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            flex-direction: column wrap;
+            gap: .8vw;
+        }
+        .section {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            /* border: 2px solid; */
+            width: 58.5vw;
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            margin-top: 7%;   
+        }
+        .container { 
+            /* border: 2px solid; */
+            width: 54vw;
+            height: 65vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .textbox{
+            /* border: 2px solid; */
+            width: 48vw;
+            height: 6vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1%;
+            font-size: 25px;
+            color: black;
+        }
+        .image {
+            margin-top: 5%;
+            width: 45vw;
+            height: 62vh;
+        }
+
+        .bfooter {
+            border: 2px solid;
+            margin-top: 10%;
+            width: 58.5vw;
+            height: 40vh;
+            display: flex;
+            justify-content:center;
+            gap: 14vw;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .foot1, .foot2, .foot3 {
+            /* border: 2px solid; */
+            width: 10vw;
+            height: 5vh;
+        }
+        h3{
+            font-weight: 200;
+        }
+        
+    </style>
+</head>
+<body>
+                        <header>
+                            <div class="nav">
+                                    <div class="menu">
+                                        <div class="icon"></div>
+                                        <div class="icon"></div>
+                                        <div class="icon"></div>
+                                    </div>    
+                                <p class="food">My food</p>
+                                <p class="mail">Mail</p>
+                            </div>
+                        </header>
+        <div class="main">
+                <div class="bmain">
+                    <section>
+                            <div class="gallery">
+                    
+                                <div><img src="../CSS_git_tasks/multimedia_folder/images/sandwich (4).jpg" alt="sandwich">
+                                    <div>
+                                        <div style="text-align: center; font-size: 24px; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                                            <p>The Perfect Sandwich, A Real NYC Classic</p>
+                                        </div>
+                                        <div style="text-align: center; font-size: 14px; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                                            <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+                                        </div>
+                                    </div>    
+                                </div>
+                                <div><img src="../CSS_git_tasks/multimedia_folder/images/steak.jpg" alt="steak">
+                                    <div>
+                                        <div style="text-align: center; font-size: 24px; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                                            <p>Let Me Tell You About This Steak</p>
+                                        </div>
+                                        <div style="text-align: center; font-size: 14px; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                                            <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div><img src="../CSS_git_tasks/multimedia_folder/images/cherries.jpg" alt="cherries">
+                                    <div>
+                                        <div style="text-align: center; font-size: 24px; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                                            <p>Cherries, interrupted</p>
+                                        </div>
+                                        <div style="text-align: center; font-size: 14px; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                                            <p>Lorem ipsum text praesent tincidunt ipsum lipsum.
+                                                    <br><br>
+                                                What else?</p>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div><img src="../CSS_git_tasks/multimedia_folder/images/wine.jpg" alt="wine">
+                                    <div>
+                                        <div style="text-align: center; font-size: 24px; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                                            <p>Once Again, Robust Wine and Vegetable Pasta</p>
+                                        </div>
+                                        <div style="text-align: center; font-size: 14px; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                                            <p>Lorem ipsum text praesent tincidunt ipsum lipsum</p>
+                                        </div>
+                                    </div> 
+                                </div>
+
+                            </div>
+                    </section>
+                    <br><br><br>
+                    <section>
+                        <div class="gallery">
+                
+                            <div><img src="../CSS_git_tasks/multimedia_folder/images/sandwich (4).jpg" alt="sandwich">
+                                <div>
+                                    <div style="text-align: center; font-size: 24px; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                                        <p>All I Need Is a Popsicle</p>
+                                    </div>
+                                    <div style="text-align: center; font-size: 14px; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                                        <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+                                    </div>
+                                </div>    
+                            </div>
+                            <div><img src="../CSS_git_tasks/multimedia_folder/images/steak.jpg" alt="steak">
+                                <div>
+                                    <div style="text-align: center; font-size: 24px; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                                        <p>Salmon For Your Skin</p>
+                                    </div>
+                                    <div style="text-align: center; font-size: 14px; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                                        <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div><img src="../CSS_git_tasks/multimedia_folder/images/cherries.jpg" alt="cherries">
+                                <div>
+                                    <div style="text-align: center; font-size: 24px; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                                        <p>The Perfect Sandwich, A Real Classic</p>
+                                    </div>
+                                    <div style="text-align: center; font-size: 14px; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                                        <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+                                    </div>
+                                </div> 
+                            </div>
+                            
+                            <div><img src="../CSS_git_tasks/multimedia_folder/images/wine.jpg" alt="wine">
+                                <div>
+                                    <div style="text-align: center; font-size: 24px; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                                        <p>Le French</p>
+                                    </div>
+                                    <div style="text-align: center; font-size: 14px; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                                        <p>Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum</p>
+                                    </div>
+                                </div> 
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <div class="section">
+                        <div class="container">
+                            <div class="textbox"><p>About Me, My Food</p></div>
+                            <div><img class="image" src="../CSS_git_tasks/multimedia_folder/images/chef.jpg" alt="chef"></div>
+                            <div><h2>I am Who I Am!</h2></div>
+                            <div><i>With Passion For Real, Good Food</i></div>
+                            <div style="text-align: center;"><p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of 
+                                lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae 
+                                justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed 
+                                vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p></div>
+                        </div>
+                     </div>
+                <!-- end of body main -->
+                <!-- </div> -->
+
+                    <footer>
+                        <div class="bfooter">
+                            <div class="foot1">
+                                <h3>FOOTER</h3>
+                                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                                <br>
+                                <p>Powered by w3.css</p>
+                            </div>
+                            <div class="foot2">
+                                <h3>BLOG POSTS</h3>
+                                 <div>
+                                    Ipsum
+                                    Praes tinci sed
+                                 </div>
+                                 <div>
+                                    <p>Lorem
+                                        Sed mattis nunc</p>
+                                 </div>
+                            </div>
+                            <div class="foot3">
+                            <div> 
+                                <h3>POPULAR TAGS</h3>
+                                <div>Travel</div>
+                                <div>Newyork</div>
+                                <div>Dinner</div>
+                                <div>salmon</div>
+                                <div>FRance</div>
+                                <div>Drinks</div>
+                                <div>Ideas</div>
+                                <div>Cusine</div>
+                                <div>Chicken</div>
+                                <div>Dressing</div>
+                                <div>Fried</div>
+                                <div>Fish</div>
+                                <div>Duck</div>
+    
+                            </div>    
+                            </div> 
+                        </div>           
+                    
+                    </div>  </footer>
+
+        </div>
+</body>
+</html>

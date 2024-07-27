@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architect Template</title>
+    <style>
+
+        .main{
+            display: flex;
+            justify-content: center;
+        }
+        nav{
+            /* border: 1px solid; */
+            width: 100%;
+            height: 6vh;
+            margin-top: -1vh;
+            position: fixed;
+            background-color: white;
+        }
+        .navlogo {
+            /* border: 1px solid; */
+            width: 10vw;
+            height: 6vh;
+            margin-left: 2vw;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            letter-spacing: 3px;
+        }
+        .header{
+            display: flex;
+            justify-content: end;
+            gap: 5vw;
+            margin-top: -6vh;
+            margin-right: 4vw;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            letter-spacing: 5px;
+
+        }
+        .bbody{
+            /* border: 1px solid; */
+            width: 82vw;
+            height: 350vh;
+            margin-top: 5vh;
+        }
+       
+        main {
+            border: 1px solid;
+            width: 82vw;
+            height: 82vh;
+            background-image: url(../CSS_git_tasks/multimedia_folder/images/architect\ \(1\).jpg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .blogo{
+            color: white;
+            font-size: 35px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            letter-spacing: 3px;
+        }
+
+        .projects {
+            /* border: 1px solid; */
+            width: 100%;
+            height: 6vh;
+            color: red;
+            margin-top: 40vh;
+        }
+        .bproject {
+            /* border: 2px solid; */
+            width: 15px;
+            height: 10px;
+            margin-top: 400px;
+            display: flex;
+            padding: 5px;
+        }
+        .section1{
+            margin-top: 5%;
+        }
+        .pgallery {
+            /* border: 1px solid; */
+            width: 82vw;
+            margin-top: 4%;
+            display: flex;
+            gap: 15px;
+        }
+        
+        .image1 {
+            border: 1px solid;
+            width: 20vw;
+            height: 22vh;
+            background-image: url(../CSS_git_tasks/multimedia_folder/images/house5.jpg);
+            background-size: cover;
+            /* color: white;
+            font-size: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center; */
+        }
+        .p {
+            color: white;
+            font-size: 25px;
+            display: flex;
+            justify-content: center;
+            margin-top: 25%;
+            background-color: rgba(0, 0, 0, 0.686);
+        }
+        .image22{
+            border: 1px solid;
+            width: 20vw;
+            height: 22vh;
+            background-image: url(../CSS_git_tasks/multimedia_folder/images/house2.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .image3 {
+            border: 1px solid;
+            width: 20vw;
+            height: 22vh;
+            background-image: url(../CSS_git_tasks/multimedia_folder/images/asset\ 3.jpeg);
+            background-size: cover;
+            background-position: center;
+        }
+        .image4 {
+            border: 1px solid;
+            width: 20vw;
+            height: 22vh;
+            background-image: url(../CSS_git_tasks/multimedia_folder/images/asset\ 4.jpeg);
+            background-size: cover;
+            background-position: center;
+        }
+        .section2{
+            margin-top: 6%;
+        }
+        .agallery {
+            width: 82vw;
+            margin-top: 4%;
+            display: flex;
+            gap: 15px;
+
+        }
+        .image5 {
+            border: 1px solid;
+            width: 20vw;
+            height: 22vh;
+            background-image: url(../CSS_git_tasks/multimedia_folder/images/house2.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .image6 {
+            border: 1px solid;
+            width: 20vw;
+            height: 22vh;
+            background-image: url(../CSS_git_tasks/multimedia_folder/images/house5.jpg);
+            background-size: cover;
+            background-position: center;
+
+        }
+        .image7 {
+            border: 1px solid;
+            width: 20vw;
+            height: 22vh;
+            background-image: url(../CSS_git_tasks/multimedia_folder/images/asset\ 4.jpeg);
+            background-size: cover;
+            background-position: center;
+        }
+        .image8 {
+            border: 1px solid;
+            width: 20vw;
+            height: 22vh;
+            background-image: url(../CSS_git_tasks/multimedia_folder/images/asset\ 3.jpeg);
+            background-size: cover;
+            background-position: center;
+        }
+        .image2 {
+            /* border: 1px solid; */
+            width: 20vw;
+            height: 250px;
+            filter:grayscale(40%);
+
+        }
+        .imageinfo {
+            /* border: 2px solid; */
+            color: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 500;
+        }
+        .contact1 {
+            color: black;
+            font-size: 18px;
+            border: 1px solid;
+            text-align: center;
+            height: 4vh;
+            background-color: rgba(0, 0, 0, 0.224);
+        }
+        .section3{
+            margin-top: 350px;
+        }
+        input {
+            width: 81.5vw;
+            height: 50px;
+            font-size: 18px;
+        }
+        button{
+            color: white; 
+            background-color: black;
+            font-size: 18px;
+            height: 40px; 
+        }
+        .section4{
+            margin-top: 70px;
+            background-image: url(../CSS_git_tasks/multimedia_folder/images/map.jpg);
+            border: 1px solid;
+            width: 82vw;
+            height: 80vh;
+        }
+        .lastimage {
+            border: 1px solid;
+            width: 82vw;
+            height: 80vh;
+        }
+        footer{
+            border: 1px solid;
+            width: 98.9vw;
+            height: 90px;
+            margin-left: -8px;
+            margin-top: 390px;
+            margin-bottom: -6px;
+            font-size: 20px;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <!-- NAVIGATION -->
+        <nav>
+            <div class="navlogo"> 
+                <p><span style="font-weight: bold;">B R</span> Architects</p>
+            </div>
+            <div class="header">
+                <div class="project">Projects</div>
+                <div class="about">About</div>
+                <div class="contact">Contact</div>
+            </div>
+        </nav>
+    
+        <div class="bbody">
+
+            <main>
+                <p class="blogo"><span style="font-weight: bold; background-color: rgba(0, 0, 0, 0.635); width: 20px; padding: 10px;">B R</span> Architects</p>
+            </main>
+
+
+                <section class="section1">
+                        <p style="font-size: 25px; font-family: Verdana, Geneva, Tahoma, sans-serif; color: black;">Projects</p>
+                        <div class="pgallery">
+                            <div class="image1"><p class="p">Summar House</p></div>
+                            <div class="image22"><p class="p"> Brick House</p></div>
+                            <div class="image3"><p class="p">Renovated</p></div>
+                            <div class="image4"><p class="p">Barn House</p></div> 
+                        </div>
+                        <div class="pgallery">
+                            <div class="image5"><p class="p">Summar House</p></div>
+                            <div class="image6"><p class="p"> Brick House</p></div>
+                            <div class="image7"><p class="p">Renovated</p></div>
+                            <div class="image8"><p class="p">Barn House</p></div>
+                        </div>
+                </section> 
+
+                    <section class="section2">
+                        <p style="font-size: 25px; font-family: Verdana, Geneva, Tahoma, sans-serif; color: black;">About</p>
+                        <p style="font-size: 18px; font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+                             commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur 
+                             adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                             laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <div class="agallery">
+                            <div class="image2">
+                                <img  class="image2"  src="../CSS_git_tasks/multimedia_folder/images/asset 5.jpeg" alt="image1">
+                                <div class="imageinfo">
+                                    <div>
+                                        <p style="font-size: 25px;">John Doe</p>
+                                    </div>
+                                    <div>
+                                        <p style="font-size: 15px;">CEO & FOUNDER</p>
+                                    </div>
+                                    <div>
+                                        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                                    </div>
+                                    <div class="contact1">
+                                        <p style="margin-top: 6px;">Contact</p>
+                                    </div>
+                                </div>    
+                            </div>
+                            
+                            <div class="image2">
+                                <div class="image2">
+                                    <img  class="image2"  src="../CSS_git_tasks/multimedia_folder/images/asset 6.jpeg" alt="image1">
+                                    <div class="imageinfo">
+                                        <div>
+                                            <p style="font-size: 25px;">Jane Doe</p>
+                                        </div>
+                                        <div>
+                                            <p style="font-size: 15px;">Architect</p>
+                                        </div>
+                                        <div>
+                                            <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                                        </div>
+                                        <div class="contact1">
+                                            <p style="margin-top: 6px;">Contact</p>
+                                        </div>
+                                    </div>    
+                                </div>
+                            </div>
+                            <div class="image2">
+                                <div class="image2">
+                                    <img  class="image2"  src="../CSS_git_tasks/multimedia_folder/images/asset 7.jpeg" alt="image1">
+                                    <div class="imageinfo">
+                                        <div>
+                                            <p style="font-size: 25px;">Mike Ross</p>
+                                        </div>
+                                        <div>
+                                            <p style="font-size: 15px;">Architect</p>
+                                        </div>
+                                        <div>
+                                            <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                                        </div>
+                                        <div class="contact1">
+                                            <p style="margin-top: 6px;">Contact</p>
+                                        </div>
+                                    </div>    
+                                </div>
+                            </div>
+                            <div class="image2">
+                                <div class="image2">
+                                    <img  class="image2"  src="../CSS_git_tasks/multimedia_folder/images/asset 8.jpeg" alt="image1">
+                                    <div class="imageinfo">
+                                        <div>
+                                            <p style="font-size: 25px;">Dan Star</p>
+                                        </div>
+                                        <div>
+                                            <p style="font-size: 15px;">Architect</p>
+                                        </div>
+                                        <div>
+                                            <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                                        </div>
+                                        <div class="contact1">
+                                            <p style="margin-top: 6px;">Contact</p>
+                                        </div>
+                                    </div>    
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="section3">
+                            <!-- <section class="section1"> -->
+                        <p style="font-size: 25px; font-family: Verdana, Geneva, Tahoma, sans-serif; color: black;">Contact</p>
+                        <br>
+                        <p style="font-size: 20px; font-family: Verdana, Geneva, Tahoma, sans-serif;">Lets get in touch and talk about your next project.</p>
+                        <div class="form">
+                            <form action="">
+                                <input type="text" placeholder="Name"> <br><br>
+                                <input type="email" placeholder="Email"> <br><br>
+                                <input type="text" placeholder="Subject"> <br><br>
+                                <input type="text" placeholder="Comment"><br><br><br>
+                                <button>SEND MESSAGE</button>
+                            </form>
+                        </div>
+                    </section> 
+
+                    <!-- section 4 -->
+                    <section class="section4">
+                        <!-- <img class="lastimage" src="../CSS_git_tasks/multimedia_folder/images/map.jpg" alt=""> -->
+                    </section>
+        </div>
+    </div>
+    <footer>
+        <p style="margin-top: 35px;">Designed by Sai Kiran Avusula</p>
+    </footer>
+</body>
+</html>
