@@ -1,0 +1,162 @@
+:root {
+    --border-color: blue;
+    --fill-color: rgb(14, 183, 240);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: rgb(198, 218, 234);
+}
+
+.body-main {
+    background-color: rgb(205, 244, 255);
+    border: 2px solid;
+    margin-top: 4%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+    /* width: 100%; */
+    /* height: 100%; */
+}
+
+/* toggle button */
+.righttoggle-button {
+    display: none;
+}
+
+
+.goal {
+    /* border: 2px solid; */
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+input[type] {
+    border: transparent;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+input[type=text]:focus {
+    border: transparent;
+}
+
+/* body styling */
+
+.body-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card {
+    width: 25rem;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    border-radius: 40px 40px 50px 50px;
+}
+
+.bottle-section {
+    display: flex;
+    align-items: center;
+    background-color: aqua;
+    flex-wrap: wrap-reverse;
+    gap: 5em;
+    margin-bottom: 50px;
+}
+
+
+/* botltle styling*/
+/* .bottle {
+    position: relative;
+    width: 100px;
+    height: 250px;
+    display: flex;
+    flex-wrap: wrap;
+} */
+
+.bottle {
+    background-color: white;
+    border: 5px solid var(--border-color);
+    color: var(--fill-color);
+    border-radius: 0 0 50px 50px;
+    width: 150px;
+    height: 340px;
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+/* .bottle-neck {
+    border: 5px double;
+    position: absolute;
+    bottom: 249.5px;
+    width: 40px;
+    left: 25px;
+    height: 60px;
+    background-color: #ced5d7;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} */
+
+/* resizing small cups */
+.bottle.bottle-small {
+    width: 60px;
+    height: 85px;
+    border: 3px solid blue;
+    border-radius: 0 0 15px 15px;
+    background-color: aliceblue;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    transition: 0.5s ease;
+}
+
+.bottle.bottle-small.full {
+    background-color: var(--fill-color);
+    color: white;
+}
+
+/* for all small cups */
+.cups {
+    display: flex;
+    flex-wrap: wrap;
+    width: 280px;
+}
+
+.remained {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1;
+    transition: 0.5s ease-in-out;
+}
+
+.percentage {
+    background-color: var(--fill-color);
+    text-align: center;
+    color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.text {
+    margin: 0 0 5px;
+    text-align: center;
+}
