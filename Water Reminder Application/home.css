@@ -8,7 +8,8 @@
 }
 
 .navbar {
-    background: rgba(255, 255, 255, 0.54);
+
+    background-color: #e3f2fd;
     /* backdrop-filter: blur(10px); */
     /* -webkit-backdrop-filter: blur(10px); */
     border-radius: 0px 0px 16px 16px;

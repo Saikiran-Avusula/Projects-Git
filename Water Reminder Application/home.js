@@ -1,17 +1,36 @@
+
+//    salutation 
+const greetText = document.getElementById("greetText");
+let presentTime = new Date().getHours();
+// presentTime = 20
+const greeting = presentTime >= 5 && presentTime < 12 ? "Good Morning🌤️" : presentTime >= 12 && presentTime < 18 ? "Good Afternoon🌞" : "Good Evening🌥️"
+// console.log(greeting);
+greetText.innerHTML = `${greeting} Sai Kiran !`
+
+
 //toast notification
 const toastTrigger = document.getElementById('liveToastBtn')
-const toastLiveExample = document.getElementById('liveToast')
+    const toastLiveExample = document.getElementById('liveToast')
+    const liveToastBtnOff = document.getElementById('liveToastBtnOff');
 
-if (toastTrigger) {
-    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
-    toastTrigger.addEventListener('click', () => {
-        toastBootstrap.show()
-    })
-}
+    liveToastBtn.style.color = "green"
+    liveToastBtnOff.style.color = "red"
 
-// // set reminder timer 
-// let toast = document.getElementById("toast");
+    if (toastTrigger) {
+        const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+        toastTrigger.addEventListener('click', () => {
+            let timer = setInterval(() => {
+                toastBootstrap.show()
 
+            }, 2000);
+
+            liveToastBtnOff.addEventListener('click', () => {
+                clearInterval(timer);
+            })
+        })
+
+
+    }
 
 
 // bottle section
@@ -139,3 +158,4 @@ function totalCupsFull() {
 //         origin: { y: 0.6 }
 //     });
 // }
+
