@@ -54,7 +54,6 @@
         margin-top: 10rem;
         margin-right: 2.5rem;
         margin-left: 2.5rem;
-
     }
 
     .about {
@@ -67,6 +66,7 @@
         border: 1px solid rgba(255, 255, 255, 0.375);
         border-radius: 20px;
         flex-wrap: wrap;
+        flex-grow: 0.5;
 
 
     }
@@ -80,6 +80,29 @@
         border: 1px solid rgba(255, 255, 255, 0.375);
         border-radius: 20px;
         flex-wrap: wrap;
+        /* flex-grow: 0.5; */
+    }
+
+    @media screen and (max-width:768px) {
+        .about {
+            width: 50%;
+            margin-left: .5rem;
+        }
+
+        #form {
+            width: 60%;
+        }
+    }
+
+    @media screen and (max-width:425px) {
+        .about {
+            width: 100%;
+            /* margin-left: .5rem; */
+        }
+
+        #form {
+            width: 60%;
+        }
 
     }
 </style>
