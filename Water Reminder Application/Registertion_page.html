@@ -33,6 +33,7 @@
         background-blend-mode: multiply;
         background-repeat: no-repeat;
         backface-visibility: visible;
+        overflow: hidden;
     }
 
     .formbody {
@@ -44,7 +45,7 @@
 
     #form {
         border: 1px solid;
-        width: 40rem;
+        width: 45%;
         background: rgba(255, 255, 255, 0.75);
         -webkit-backdrop-filter: blur(6px);
         backdrop-filter: blur(6px);
@@ -57,65 +58,48 @@
 <body>
     <nav class="navbar fixed-top">
         <div class=" container-fluid">
-            <!-- Salutation -->
-            <h5 class="navbar-name p-2" href="#" id="greetText"></h5>
             <!-- app tilte -->
-            <a class="navbar-brand  text-danger fs-2 mx-auto fw-bold" href="#">Water Reminder Application</a>
+            <a class="navbar-brand  text-danger fs-2 mx-auto fw-bold">Water Reminder Application</a>
+        </div>
     </nav>
 
     <div class="formbody ">
-        <form class="row g-4 needs-validation m-5 p-3 fs-5" id="form" novalidate action="./index.html">
+        <form class="row g-4 needs-validation m-5 p-3 fs-5" id="form" novalidate>
             <div class="formheader text-center my-2">
-                <h3><u>Please fill below details.</u></h3>
-            </div>
-            <div class="col-">
-                <label for="validationCustom01" class="form-label">First name</label>
-                <input type="text" class="form-control" id="validationCustom01" placeholder="Enter First Name" required>
-                <div class="valid-feedback">
-                    Looks good!
-                </div>
+                <h3><u>Please Enter your details below.</u></h3>
             </div>
 
+            <!-- user Name -->
             <div class="col-">
-                <label for="validationCustom02" class="form-label">Last name</label>
-                <input type="text" class="form-control" id="validationCustom02" placeholder="Enter Last Name" required>
-                <div class="valid-feedback">
-                    Looks good!
-                </div>
+                <label for="userName" class="form-label">Your Name</label>
+                <input type="text" class="form-control" id="userName" placeholder="Enter your Name" required>
+                <div class="valid-feedback">Looks good!</div>
             </div>
 
-            <div class="col-">
-                <label for="validationCustom04" class="form-label">Gender</label>
-                <select class="form-select" id="validationCustom04" required>
-                    <option selected disabled value="">Choose...</option>
-                    <option>Male</option>
-                    <option>Fe-Male</option>
-                    <option>Others</option>
-                </select>
-                <div class="invalid-feedback">
-                    Please select a valid state.
-                </div>
+            <!-- user password -->
+            <div class="col">
+                <label for="userPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="userPassword" placeholder="Enter your password"
+                    required>
+                <div class="valid-feedback">Looks good!</div>
             </div>
 
-            <!-- awake hours input -->
-            <div class="col-">
-                <label for="validationCustom05" class="form-label">Your Awake Time (in Hours)</label>
-                <input type="text" class="form-control" id="validationCustom05" required
+            <!-- user awake hours input -->
+            <div class="col">
+                <label for="userAwakeHours" class="form-label">Your Awake Time (in Hours)</label>
+                <input type="text" class="form-control" id="userAwakeHours" required
                     placeholder="Enter your awake hours">
-                <div class="invalid-feedback">
-                    Please provide a valid awake hours.
-                </div>
+                <div class="invalid-feedback">Please provide a valid awake hours.</div>
             </div>
 
             <!-- target water to intake input -->
-            <div class="col-">
-                <label for="validationCustom05" class="form-label">Your Water Intake Goal (in Liters)</label>
-                <input type="text" class="form-control" id="validationCustom05" required
+            <div class="col">
+                <label for="userIntakeWater" class="form-label">Your Water Intake Goal (in Liters)</label>
+                <input type="text" class="form-control" id="userIntakeWater" required
                     placeholder="Enter your water intake goal">
-                <div class="invalid-feedback">
-                    Please provide a valid liters.
-                </div>
+                <div class="invalid-feedback">Please provide a valid liters.</div>
             </div>
+
 
             <div class="col-">
                 <div class="form-check">
@@ -130,7 +114,7 @@
             </div>
 
             <div class="d-grid gap-4 col-4 mx-auto">
-                <button class="btn btn-outline-primary" type="submit" title="Sign-In">Sign-Up</button>
+                <button class="btn btn-outline-primary" type="submit" title="Sign-In" id="submitBtn">Sign-Up</button>
             </div>
         </form>
     </div>
@@ -156,6 +140,43 @@
                 }, false)
             })
     })()
+
+
+    // validation form for login and storing data into local storage
+    let userName = document.getElementById("userName");
+    let userPassword = document.getElementById("userPassword");
+    let userAWakeHours = document.getElementById("userAWakeHours");
+    let userIntakeWater = document.getElementById("userIntakeWater");
+    let form = document.getElementById("form");
+    let submitBtn = document.getElementById("submitBtn");
+
+    form.addEventListener("submit", () => {
+        if (userName.value && userPassword.value && userAWakeHours.value && userIntakeWater.value) {
+            // Check if awakeHours and IntakeWater are numbers
+            if (!isNaN(parseFloat(userAWakeHours.value)) && !isNaN(parseFloat(userIntakeWater.value))) {
+                // storing data in object format
+                let userInput = {
+                    name: userName.value,
+                    password: userPassword.value,
+                    awakeHours: userAWakeHours.value.toString(), // Convert to string
+                    IntakeWater: userIntakeWater.value.toString() // Convert to string
+                };
+                // storing into local storage
+                localStorage.setItem("userData", JSON.stringify(userInput));
+                window.location.assign = "index.html"
+            } else {
+                alert("Please enter valid numbers for Awake Hours and Intake Water")
+            }
+        } else {
+            alert("please enter your details")
+        }
+    })
+
+
+
+
 </script>
+
+
 
 </html>
