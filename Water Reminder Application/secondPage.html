@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <title>Document</title>
+</head>
+<style>
+    .navbar {
+        background: rgba(255, 255, 255, 0.54);
+        border-radius: 0px 0px 16px 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        background-color: #e3f2fd;
+        flex-wrap: nowrap;
+        font-weight: bold;
+    }
+
+
+    .contentBody {
+        border: 1px solid;
+        margin-top: 200px;
+        margin-left: 45em;
+        width: 280px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    @media screen and (max-width:1212px) {
+        .contentBody {
+            margin-left: 28em;
+
+        }
+    }
+
+    @media screen and (max-width:1182px) {
+        .contentBody {
+            margin-left: 28em;
+        }
+    }
+
+    @media screen and (max-width:1024px) {
+        .contentBody {
+            margin-left: 25em;
+
+        }
+    }
+
+    @media screen and (max-width:768px) {
+        .contentBody {
+            margin-left: 15em;
+        }
+    }
+
+    @media screen and (max-width:520px) {
+        .contentBody {
+            margin-left: 8em;
+            /* color: red; */
+        }
+    }
+
+    @media screen and (max-width:426px) {
+        .contentBody {
+            margin-left: 5em;
+            /* color: red; */
+        }
+    }
+
+
+    @media screen and (max-width:320px) {
+        .contentBody {
+            margin-left: 20px;
+        }
+    }
+</style>
+
+<body class="contentBody">
+    <h3 style="text-align: center;">User Infomation</h3>
+    <nav class=" navbar fixed-top">
+        <div class=" container-fluid">
+            <!-- app tilte -->
+            <a class="navbar-brand  text-danger fs-2 mx-auto" id="title">Water Reminder Application.</a>
+        </div>
+    </nav>
+
+
+    <script>
+        var data = JSON.parse(localStorage.getItem("Data"));
+        // console.log(data)
+        for (let i = 0; i < data.length; i++) {
+            var table_tag = document.createElement("table");
+            // table_tag.style.width = "380px"
+            table_tag.style.margin = "1em"
+            table_tag.style.border = "2px solid"
+
+
+            var tr_tag = document.createElement("tr");
+
+
+
+
+            var td1 = document.createElement("td");
+            td1.innerText = data[i].name;
+            td1.style.width = "200px";
+            td1.style.fontSize = "32px";
+            td1.style.border = "2px solid";
+            td1.style.borderRadius = "8px"
+            td1.style.width = "200px";
+            td1.style.fontSize = "32px"
+
+
+            var td2 = document.createElement("td");
+            td2.style.padding = "10px"
+            td2.style.borderCollapse = "collapse"
+
+
+
+            var btn_tag = document.createElement("button");
+            btn_tag.innerText = "Details";
+            btn_tag.addEventListener("click", displayCard);
+            btn_tag.style.borderRadius = "6px";
+            btn_tag.style.fontSize = "23px"
+            btn_tag.style.color = "white";
+            btn_tag.style.borderRadius = "15px"
+            btn_tag.style.backgroundColor = "rgb(109, 165, 184)";
+
+
+            td2.appendChild(btn_tag);
+            tr_tag.appendChild(td1);
+            tr_tag.appendChild(td2);
+            table_tag.appendChild(tr_tag);
+            document.body.appendChild(table_tag);
+
+
+            function displayCard() {
+                window.location.assign("./third_page.html");
+                localStorage.setItem("ResData", JSON.stringify(data[i]));
+            }
+
+            let newName = data[i].name;
+
+            let goal = data[i].goal
+
+
+            let waterMl = data[i].goal * 1000;
+
+
+            var awake = data[i].time;
+            console.log(waterMl)
+
+
+            let remainder = waterMl / awake;
+            console.log(remainder);
+
+
+            waterComplete = 0
+
+
+            // let k = setInterval(() => {
+            //     alert(newName + " Drink " + remainder + "ml of water to complete your goal for today");
+            //     waterComplete += remainder;
+            //     console.log(waterComplete)
+            //     if (waterComplete == waterMl) {
+            //         clearInterval(k)
+            //     }
+            // }, 5000);
+            // const REMINDER_INTERVAL = 3600000;
+
+
+            //for 1 hour time interval
+            const REMINDER_INTERVAL = 3600000;
+            let stopReminder = setInterval(() => {
+                waterComplete += remainder;
+                // console.log(waterComplete);
+
+                if (remainder <= 1000) {
+                    alert(`ℹ️ ${(data[i].name)}, It's time to have some water ${Math.round(remainder)}ml💧`);
+                }
+
+                if (waterComplete == waterMl) {
+                    clearInterval(stopReminder)
+                    alert(`Yohoo... Congrats🎉, ${data[i].name}!🎯 You have completed today's goal: ${data[i].goal}Liters💦`)
+                } else {
+                    alert(`ℹ️ ${data[i].name}, Till now you had accomplished your goal ${Math.round(waterComplete)}ml 💦`)
+                }
+
+            }, REMINDER_INTERVAL);
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

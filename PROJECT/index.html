@@ -194,7 +194,7 @@
                     let storedData = JSON.parse(localStorageData);
                     if (username.value === storedData.name && password.value === storedData.password) {
                         alert("Login successful");
-                        window.location.assign = "test.html"
+                        window.location.assign("./test.html");
                     } else {
                         alert("Invalid credentials");
                     }

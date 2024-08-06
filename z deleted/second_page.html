@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <title>Document</title>
+
+    <style>
+        .navbar {
+            background: rgba(255, 255, 255, 0.54);
+            border-radius: 0px 0px 16px 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            background-color: #e3f2fd;
+            flex-wrap: nowrap;
+            font-weight: bold;
+        }
+
+        .content-body {
+            border: 8px solid;
+            /* background-image: url(./water-drops-background.jpg); */
+            /* display: flex;
+            flex-direction: column;
+            flex-wrap: wrap; */
+            /* justify-content: center;
+            align-items: center;
+            flex-direction: column; */
+        }
+    </style>
+</head>
+
+<body class="content-body">
+
+    <nav class=" navbar fixed-top">
+        <div class=" container-fluid">
+            <!-- app tilte -->
+            <a class="navbar-brand  text-danger fs-2 mx-auto" id="title">Water Reminder Application.</a>
+        </div>
+    </nav>
+    <script>
+        var data = JSON.parse(localStorage.getItem("Data"));
+        // console.log(data)
+        for (let i = 0; i < data.length; i++) {
+
+
+            // creating a table using table, td, tr 
+            var table_tag = document.createElement("table");
+            var h2_tag = document.createElement("h2");
+            // table_tag.style.display = "flex"
+            // table_tag.style.flexDirection = "column";
+            // table_tag.style.alignItems = "center";
+            // table_tag.style.justifyContent = "center";
+            table_tag.style.marginTop = "21rem"
+            // table_tag.style.marginTop = "flex";
+            // table_tag.style.borderRadius = "50px"
+
+
+            var tr_tag = document.createElement("tr");
+            var td1 = document.createElement("td");
+            tr_tag.innerText = data[i].name; //for printing in document in table
+            tr_tag.style.width = "200px";
+            tr_tag.style.fontSize = "32px";
+            tr_tag.style.border = "2px solid";
+            tr_tag.style.borderRadius = "8px"
+
+            //for button table data column;
+            var td2 = document.createElement("td");
+            td2.style.border = "2px solid";
+            td2.style.padding = "10px"
+            // td2.style.borderRadius = "50px"
+            td2.style.borderCollapse = "collapse"
+
+            // creating a button to redirect to card display
+            var btn_tag = document.createElement("button");
+            btn_tag.innerText = "Details";
+            btn_tag.style.borderRadius = "6px";
+            btn_tag.style.fontSize = "23px"
+            btn_tag.style.color = "white";
+            btn_tag.style.borderRadius = "15px"
+            btn_tag.style.backgroundColor = "rgb(109, 165, 184)";
+            btn_tag.addEventListener("click", displayCard);
+
+
+            // for button row 
+            td2.appendChild(btn_tag);
+            tr_tag.appendChild(td1);
+            tr_tag.appendChild(td2);
+            table_tag.appendChild(tr_tag);
+            document.body.appendChild(table_tag);
+
+            function displayCard() {
+                window.location.assign("./third_page.html");
+                localStorage.setItem("ResData", JSON.stringify(data[i]));
+            }
+
+            let newName = data[i].name;
+
+
+            let goal = data[i].goal
+
+
+            let waterMl = data[i].goal * 1000;
+
+
+            var awake = data[i].time;
+            console.log(waterMl)
+
+
+            let remainder = waterMl / awake;
+            console.log(remainder);
+
+            waterComplete = 0
+
+            var update = document.createElement("h3");
+
+            let k = setInterval(() => {
+                if (waterMl < 1000) {
+                    alert(`ℹ️ ${data[i].name}, It's time to have some water ${remainder}ml💧`);
+
+                } else {
+                    alert(`ℹ️ ${data[i].name}, It's time to have some water ${remainder}L💧`);
+                }
+                waterComplete += remainder;
+                console.log(waterComplete);
+
+                if (waterComplete == waterMl) {
+                    clearInterval(k)
+                    alert(`Yohoo... Congrats🎉, ${data[i].name}! you have completed today's goal: ${data[i].goal}Liters💧`)
+                }
+
+                if (waterMl < 1000) {
+                    alert(`ℹ️ ${data[i].name},Till now you had accomplished your goal ${waterComplete}ml 💦`)
+                } else {
+                    alert(`ℹ️ ${data[i].name}, Till now you had accomplished your goal ${waterComplete}L💦`)
+                }
+            }, 8000);
+
+        }
+    </script>
+</body>
+
+</html>

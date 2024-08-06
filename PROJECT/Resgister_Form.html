@@ -13,7 +13,7 @@
     <title>Form Register</title>
 </head>
 <style>
-    * {
+    *{
         box-sizing: border-box;
         margin: 0;
         padding: 0;
@@ -137,48 +137,45 @@
             <h3><u>Register Your Details.</u></h3>
         </div>
         <div class="forminput">
-            Username: <input type="text" id="username" name="username" required>
+            Username: <input type="text" id="username" name="username">
             <br><br>
-            Password: <input type="password" id="password" name="password" required>
+            Password: <input type="password" id="password" name="password">
             <br><br>
-            Awake time <input type="number" id="userAwakeTime" name="awake time" required>
+            Awake time <input type="number" id="userAwakeTime" name="awake time">
             <br><br>
-            Water Intake goal <input type="number" id="userWaterGoal" name="waterGoal" required>
+            Water Intake goal <input type="number" id="userWaterGoal" name="waterGoal">
             <br><br>
+            <input type="button" value="Sign-In" id="signupBtn">
         </div>
-        <div class="btn">
-            <button id="signupBtn">Sign-up</button>
-        </div>
+
     </form>
 
 </body>
 <script>
 
     // store deatils into local storage
-    let form = document.getElementById("form");
-    let userName = document.getElementById("username")
-    let userPassword = document.getElementById("password");
-    let userAwakeTime = document.getElementById("userAwakeTime");
-    let userWaterGoal = document.getElementById("userWaterGoal");
-    let signupBtn = document.getElementById("signupBtn");
-
-    signupBtn.addEventListener("click", () => {
-        if (userName.value && userPassword.value && userAwakeTime.value && userWaterGoal.value) {
+    let form = document.getElementById(" form"); let userName=document.getElementById("username") ;let
+                userPassword=document.getElementById("password"); let
+                userAwakeTime=document.getElementById("userAwakeTime"); let
+                userWaterGoal=document.getElementById("userWaterGoal"); let
+                signupBtn=document.getElementById("signupBtn"); signupBtn.addEventListener("click", ()=> {
+            if (userName.value && userPassword.value && userAwakeTime.value && userWaterGoal.value) {
             let userDetails = {
-                name: userName.value,
-                password: userPassword.value,
-                awakeTime: userAwakeTime.value,
-                waterGoal: userWaterGoal.value
+            name: userName.value,
+            password: userPassword.value,
+            awakeTime: userAwakeTime.value,
+            waterGoal: userWaterGoal.value
             };
             localStorage.setItem("userDetails", JSON.stringify(userDetails));
-            window.location.assign = "index.html" //login page
-        } else {
+            //login page
+            } else {
             alert("please enter deatils")
-        }
-    })
+            }
+            window.location.assign("./index.html")
+            })
 
 
 
-</script>
+            </script>
 
 </html>

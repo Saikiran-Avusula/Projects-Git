@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Register form</h3>
+    <form action="" id="form">
+        Name: <input type="text" id="Uname">
+        password: <input type="password" id="Upassword">
+        age: <input type="number" id="Uage">
+        <input type="submit" id="Usubmit">
+    </form>
+</body>
+<script>
+    let form = document.getElementById("form");
+    let Uname = document.getElementById("Uname");
+    let Upassword = document.getElementById("Upassword");
+    let Uage = document.getElementById("Uage")
+    let Usubmit = document.getElementById("Usubmit");
+
+    form.addEventListener("submit", () => {
+        if (Uname.value && Upassword && Uage) {
+            let details = {
+                name: Uname,
+                password: Upassword,
+                age: Uage
+            }
+
+            localStorage.setItem
+        } else {
+            alert("please enter details")
+        }
+    })
+</script>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="./custom inter val.html" id="form">
+        Your Water Intake Goal (in Liters): <input type="text" id="waterIntake"> <br><br>
+        Your Awake Time (in hours): <input type="text" required id="awakeHours"> <br><br>
+        <input type="submit" id="submitBtn">
+        <h2 id="h2"></h2>
+    </form>
+</body>
+<script>
+    let awakeHours = document.getElementById("awakeHours");
+    let waterIntake = document.getElementById("waterIntake");
+    let submitBtn = document.getElementById("submitBtn");
+    let form = document.getElementById("form");
+    let h2 = document.getElementById("h2");
+
+    form.addEventListener("submit", (displayData) => {
+        let target;
+        displayData.preventDefault();
+        target = parseFloat(waterIntake.value) / parseFloat(awakeHours.value);
+        if (target < 1) {
+            h2.innerHTML = `${target * 1000}ml per an hour`
+        }
+        else {
+
+            h2.innerHTML = `${target}L per an hour`
+        }
+
+    })
+</script>
+
+</html>
