@@ -27,16 +27,22 @@
 
 
     .contentBody {
-        border: 1px solid;
+        border: 5px solid;
         margin-top: 200px;
         margin-left: 45em;
         width: 280px;
-        border-radius: 5px;
+        /* border-radius: 5px; */
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+        background: rgba(255, 255, 255, 0.46);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        /* backdrop-filter: blur(6.5px);
+        -webkit-backdrop-filter: blur(6.5px); */
+        border: 5px solid rgba(255, 255, 255, 1);
     }
 
     @media screen and (max-width:1212px) {
@@ -107,6 +113,7 @@
             // table_tag.style.width = "380px"
             table_tag.style.margin = "1em"
             table_tag.style.border = "2px solid"
+            table_tag.style.borderRadius = "5px"
 
 
             var tr_tag = document.createElement("tr");
@@ -119,7 +126,7 @@
             td1.style.width = "200px";
             td1.style.fontSize = "32px";
             td1.style.border = "2px solid";
-            td1.style.borderRadius = "8px"
+            // td1.style.borderRadius = "px"
             td1.style.width = "200px";
             td1.style.fontSize = "32px"
 

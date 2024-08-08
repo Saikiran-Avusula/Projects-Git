@@ -22,14 +22,14 @@
             background-color: #e3f2fd;
             flex-wrap: nowrap;
             font-weight: bold;
+
+
         }
 
         #main_div {
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
-
-
         }
     </style>
 </head>
@@ -58,12 +58,17 @@
 
         var main_div = document.getElementById("main_div");
         var divv = document.createElement("div");
-        divv.style.backgroundColor = "#cfe5f5"
-        divv.style.display = "flex"
-        divv.style.flexDirection = "column"
-        divv.style.justifyContent = "center"
-        divv.style.alignItems = "center"
-        divv.style.borderRadius = "15px"
+        divv.style.backgroundColor = "#cfe5f5";
+        // divv.style.background = "rgba(255, 255, 255, 0.46)"
+        // background: rgba(255, 255, 255, 0.46);
+        // border-radius: 16px;
+        // divv.style.box-shadow = "rgba(0, 0, 0, 0.3)";
+        // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        divv.style.display = "flex";
+        divv.style.flexDirection = "column";
+        divv.style.justifyContent = "center";
+        divv.style.alignItems = "center";
+        divv.style.borderRadius = "20px"
         divv.style.width = "300px"
         divv.style.paddingLeft = "70px";
         divv.style.paddingTop = "50px"
