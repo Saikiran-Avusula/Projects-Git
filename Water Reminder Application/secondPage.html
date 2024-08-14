@@ -107,36 +107,33 @@
 
     <script>
         var data = JSON.parse(localStorage.getItem("Data"));
+        
         // console.log(data)
         for (let i = 0; i < data.length; i++) {
             var table_tag = document.createElement("table");
             // table_tag.style.width = "380px"
             table_tag.style.margin = "1em"
-            table_tag.style.border = "2px solid"
-            table_tag.style.borderRadius = "5px"
+            table_tag.style.textAlign = "center"
+            // table_tag.style.fontSize = "35px"
 
+            // table_tag.style.border = "2px solid"
+            table_tag.style.borderRadius = "5px"
 
             var tr_tag = document.createElement("tr");
 
-
-
-
+            // for name
             var td1 = document.createElement("td");
             td1.innerText = data[i].name;
             td1.style.width = "200px";
-            td1.style.fontSize = "32px";
-            td1.style.border = "2px solid";
+            td1.style.fontSize = "42px";
+            // td1.style.border = "2px solid";
             // td1.style.borderRadius = "px"
             td1.style.width = "200px";
-            td1.style.fontSize = "32px"
 
-
+            // for button 
             var td2 = document.createElement("td");
-            td2.style.padding = "10px"
-            td2.style.borderCollapse = "collapse"
-
-
-
+            // td2.style.padding = "10px"
+            // td2.style.borderCollapse = "collapse"
             var btn_tag = document.createElement("button");
             btn_tag.innerText = "Details";
             btn_tag.addEventListener("click", displayCard);
@@ -145,7 +142,6 @@
             btn_tag.style.color = "white";
             btn_tag.style.borderRadius = "15px"
             btn_tag.style.backgroundColor = "rgb(109, 165, 184)";
-
 
             td2.appendChild(btn_tag);
             tr_tag.appendChild(td1);

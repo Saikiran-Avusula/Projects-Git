@@ -61,6 +61,7 @@
         #formSubmit {
             padding: 2rem;
             width: 100%;
+            height: 100%;
             border: 5px solid;
             border-radius: 15px;
             background-repeat: no-repeat;
@@ -91,6 +92,7 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                height: 100%;
 
             }
 
@@ -104,6 +106,18 @@
                 height: auto;
 
             }
+        }
+
+        @media screen and (max-width:376px) {
+
+            #formSubmit {
+                padding: 2rem;
+                width: 100%;
+                height: 100vh;
+                border: 5px solid red;
+                border-radius: 15px;
+            }
+
         }
     </style>
 </head>
@@ -135,7 +149,7 @@
                 </p>
                 <p style="color: red; ">Let's say you're Sai Kiran, awake for 8 hours, with a 4-liter water intake goal.
                     Our app reminds you to drink 1 liter of water four times per an hour, helping you stay hydrated and
-                    reach your goal.</p>
+                    reach your goal.</p>
             </div>
 
             <div>
