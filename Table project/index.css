@@ -1,0 +1,9 @@
+#navbarNav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    margin-left: -35vmin
+        /* align-items: center; */
+}

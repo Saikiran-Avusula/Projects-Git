@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: antiquewhite;
+    text-align: center;
+}
+
+#containerBox {
+    height: 70vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#allButtonBox {
+    width: 60vmin;
+    height: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxButton {
+    height: 18vmin;
+    width: 18vmin;
+    font-size: 4rem;
+    color: red;
+    border: none;
+    border-radius: 2rem;
+    box-shadow: 0 0 1.5rem rgba(90, 81, 81, 0.5);
+    background-color: rgb(202, 214, 237);
+}
+
+#reset-Btn {
+    padding: 1.2rem;
+    font-size: 1.5rem;
+    background-color: black;
+    color: whitesmoke;
+    border-color: white;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem rgba(90, 81, 81, 1);
+}
+
+#newGameBtn {
+    padding: 1.2rem;
+    font-size: 1.5rem;
+    background-color: black;
+    color: whitesmoke;
+    /* border: none; */
+    /* border-color: white; */
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(90, 81, 81, 1);
+}
+
+.messageContainer {
+    margin-bottom: 10vmin;
+}
+
+.messageWinnerPlayer {
+    font-size: 2.5em;
+}
+
+/* hide util winner is declared, Shown dynamicaly */
+.hideWinner_newGameButton {
+    display: none;
+}
