@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button {
+        background-color: bisque;
+        font-size: 20px;
+    }
+</style>
+
+<body>
+    <audio id="auido" type="audio/mp3">
+        <source src="./multimedia_folder/audio/button-3.mp3">
+    </audio>
+
+    <button>Sound🔊</button>
+    <script>
+        let audio = document.querySelector("#audio")
+        let button = document.querySelector("button")
+
+        button.addEventListener("click", () => {
+            audio.play()
+        })
+    </script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <audio id="myAudio">
+        <source src="./multimedia_folder/audio/button-3.mp3" type="audio/ogg">
+    </audio>
+
+    <p>Click the buttons to play or pause the audio.</p>
+
+    <button onclick="playAudio()" type="button">Play Audio</button>
+
+
+    <script>
+        var x = document.getElementById("myAudio");
+
+        function playAudio() {
+            x.play();
+        }
+
+
+    </script>
+
+</body>
+
+</html>

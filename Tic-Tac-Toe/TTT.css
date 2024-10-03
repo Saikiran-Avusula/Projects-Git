@@ -81,22 +81,42 @@ body {
 }
 
 .messageContainer {
-    margin-bottom: 5vmin;
+    /* margin-bottom: 5vmin; */
+    height: 95vmin;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+
 }
 
 
 
 .messageWinnerPlayer {
     font-size: 2.5em;
+    color: rgb(228, 207, 151);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(12.5px);
+    -webkit-backdrop-filter: blur(12.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
 }
 
 /* hide util winner is declared, Shown dynamicaly */
 .hideWinner_newGameButton {
     display: none;
-    background: rgba( 0, 4, 48, 0.3 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 12.5px );
-    -webkit-backdrop-filter: blur( 12.5px );
+    background: rgba(0, 4, 48, 0.11);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(12.5px);
+    -webkit-backdrop-filter: blur(12.5px);
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }

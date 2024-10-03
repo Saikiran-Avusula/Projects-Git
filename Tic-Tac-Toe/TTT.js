@@ -96,8 +96,6 @@ const checkWinner = () => {
 
 // shows winner 
 const show_Winner = (winner) => {
-    messageWinnerPlayer.style.color = "white"
-    messageContainer.style.backgroundColor = "black"
     messageWinnerPlayer.innerHTML = `Congrats!🥳 Winner is '${winner}'`
     messageContainer.classList.remove("hideWinner_newGameButton")
     disabledButtonboxes(); // diables buttons after winner is shown, invokes disablebuttonboxes function
