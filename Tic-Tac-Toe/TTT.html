@@ -5,18 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic-Tac-Toe Game</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./TTT.css">
 </head>
 
-<body>
-    <div class="messageContainer hideWinner_newGameButton">
-        <br>
-        <h2 class="messageWinnerPlayer">Winner</h2>
-        <br>
-        <button id="newGameBtn">New Game</button>
-    </div>
+<body class="background">
     <main>
-        <h1> Tic-Tac-Toe Game</h1>
+        <h1 class="title">
+            <u>Tic-Tac-Toe Game</u>
+        </h1>
+        <div class="messageContainer hideWinner_newGameButton">
+            <br>
+            <h2 class="messageWinnerPlayer">Winner</h2>
+            <br>
+            <button id="newGameBtn">New Game</button>
+        </div>
         <div id="containerBox">
             <div id="allButtonBox">
                 <button class="boxButton"></button>
@@ -32,7 +34,7 @@
         </div>
         <button id="reset-Btn">Reset Game</button>
     </main>
-    <script src="./script.js"></script>
+    <script src="./TTT.js"></script>
 </body>
 
 </html>

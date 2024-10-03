@@ -35,6 +35,7 @@ boxButtons.forEach((eachButtonBox) => {
         }
         else { //player X
             eachButtonBox.innerHTML = "X"
+            eachButtonBox.style.color = "red"
             turnO = true
         }
         eachButtonBox.disabled = true
@@ -46,7 +47,8 @@ boxButtons.forEach((eachButtonBox) => {
 // reset the game after the winner or in the middle of game
 const resetGame = () => {
     turnO = true;
-    resetBtn.style.color = "red" 
+    // resetBtn.style.color = "red"
+    console.log("reset is trigged")
     // enabled all disabled button after winner is shown
     enabledButtonboxes()
     // in reset state hidded WInner message
@@ -57,7 +59,8 @@ const resetGame = () => {
 const enabledButtonboxes = () => {
     for (let eachButtonBox of boxButtons) {
         eachButtonBox.disabled = false
-        boxButtons.innerHTML = " "
+        eachButtonBox.innerHTML = "" //expmty the box values
+        // console.log("buttons are enabled")
     }
 }
 
@@ -69,9 +72,9 @@ const checkWinner = () => {
         //pattern check indexies
         // console.log(pattern[0], pattern[1], pattern[2])
         // check postion of indexies to print index text
-        console.log(boxButtons[pattern[0]].innerHTML,
-            boxButtons[pattern[1]].innerHTML,
-            boxButtons[pattern[2]].innerHTML)
+        // console.log(boxButtons[pattern[0]].innerHTML,
+        //     boxButtons[pattern[1]].innerHTML,
+        //     boxButtons[pattern[2]].innerHTML)
         // have to store the values in a varible to check the winner using postions we can do
 
         // Get the values of the positions in the current pattern
@@ -93,7 +96,9 @@ const checkWinner = () => {
 
 // shows winner 
 const show_Winner = (winner) => {
-    messageWinnerPlayer.innerHTML = `Congrats!🥳 Winner is ${winner}`
+    messageWinnerPlayer.style.color = "white"
+    messageContainer.style.backgroundColor = "black"
+    messageWinnerPlayer.innerHTML = `Congrats!🥳 Winner is '${winner}'`
     messageContainer.classList.remove("hideWinner_newGameButton")
     disabledButtonboxes(); // diables buttons after winner is shown, invokes disablebuttonboxes function
 }
