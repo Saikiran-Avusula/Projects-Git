@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor Game</title>
+    <link rel="stylesheet" href="./RPS.css">
+</head>
+<style>
+</style>
+
+<body>
+    <!-- <h1></h1> -->
+    <!-- creating Choices to select -->
+    <h1>Rock Paper Scissor Game</h1>
+    <div class="options">
+        <div class="option" id="rock">
+            <img src="./Media/rock.png" alt="Rock image" title="Rock Image">
+        </div>
+        <div class="option" id="paper">
+            <img src="./Media/paper.png" alt="Paper image" title="Paper Image">
+        </div>
+        <div class="option" id="scissor">
+            <img src="./Media/scissors.png" alt="Scissor image" title="Paper Image">
+        </div>
+    </div>
+
+    <!-- score board -->
+    <div class=" score-borad">
+            <div class="score">
+                <p id="userScore">0</p>
+                <p>You</p>
+            </div>
+            <div class="score">
+                <p id="computerScore">0</p>
+                <p>Computer</p>
+                </p>
+            </div>
+        </div>
+
+        <!-- for Messgae container to display message to get result-->
+        <div class="messageContainer">
+            <p id="messageText">Play your turns</p>
+        </div>
+
+        <script src="./RPS.js"></script>
+</body>
+
+</html>
