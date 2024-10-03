@@ -8,52 +8,21 @@
 </head>
 <style>
     button {
-        background-color: bisque;
-        font-size: 20px;
+        font-size: 35px;
+        /* background-color: black; */
     }
 </style>
 
 <body>
-    <audio id="auido" type="audio/mp3">
-        <source src="./multimedia_folder/audio/button-3.mp3">
-    </audio>
-    <button>Sound🔊</button>
+    <input type="button" value="Play Sound" onclick="play()">
+    <button onclick="play()">Play </button>
+    <audio src="./multimedia_folder/audio/button-3.mp3" id="audio"></audio>
     <script>
-        let audio = document.querySelector("#audio")
-        let button = document.querySelector("button")
-
-        button.addEventListener("click", () => {
+        function play() {
+            const audio = document.getElementById("audio")
             audio.play()
-        })
-    </script>
-</body>
-
-</html>
-
-<!DOCTYPE html>
-<html>
-
-<body>
-
-    <audio id="myAudio">
-        <source src="./multimedia_folder/audio/button-3.mp3" type="audio/ogg">
-    </audio>
-
-    <p>Click the buttons to play or pause the audio.</p>
-
-    <button onclick="playAudio()" type="button">Play Audio</button>
-
-
-    <script>
-        var x = document.getElementById("myAudio");
-
-        function playAudio() {
-            x.play();
         }
-
-
     </script>
-
 </body>
 
 </html>

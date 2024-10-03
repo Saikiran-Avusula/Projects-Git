@@ -32,27 +32,58 @@ boxButtons.forEach((eachButtonBox) => {
         if (turnO) { //player O
             eachButtonBox.innerHTML = "O"
             eachButtonBox.style.color = "green"
+            soundForO()
             turnO = false
+
         }
         else { //player X
             eachButtonBox.innerHTML = "X"
             eachButtonBox.style.color = "red"
+            soundForX()
             turnO = true
         }
         eachButtonBox.disabled = true
         count++
+
         let isWinner = checkWinner();
         if (count === 9 && !isWinner) {
             gameIsdraw()
+            // drawSound()
         }
     })
 })
+
+const soundForO = () => {
+    let audio = document.getElementById("audioForO")
+    audio.play()
+}
+
+const soundForX = () => {
+    let audio = document.getElementById("audioForX")
+    audio.play()
+}
+
+const winnerSound = () => {
+    let audio = document.getElementById("soundForWinner")
+    audio.play()
+}
+
+const drawSound = () => {
+    let audio = document.getElementById("audioForDraw")
+    audio.play()
+}
+
+const newGameSound = () => {
+    let audio = document.getElementById("newGameSound")
+    audio.play()
+}
 
 // to check game is draw function 
 const gameIsdraw = () => {
     messageWinnerPlayer.innerHTML = `Game is Draw. Play Again!🤥`
     messageContainer.classList.remove("hideWinner_newGameButton")
     disabledButtonboxes();
+    drawSound()
 }
 
 
@@ -64,6 +95,7 @@ const resetGame = () => {
     // console.log("reset is trigged")
     // enabled all disabled button after winner is shown
     enabledButtonboxes()
+    newGameSound()
     // in reset state hidded WInner message
     messageContainer.classList.add("hideWinner_newGameButton")
 }
@@ -99,7 +131,7 @@ const checkWinner = () => {
         if (postion1_Value != "" && postion2_Value != "" && postion3_Value != "") {
             // Check if all values in the current pattern are the same
             if (postion1_Value === postion2_Value && postion2_Value === postion3_Value) {
-                console.log("winner", postion1_Value);
+                // console.log("winner", postion1_Value);
                 show_Winner(postion1_Value);
                 // break; // Stop further checking once a winner is found
             }
@@ -109,9 +141,13 @@ const checkWinner = () => {
 
 // shows winner 
 const show_Winner = (winner) => {
-    messageWinnerPlayer.innerHTML = `Congrats!🥳 Winner is '${winner}'`
-    messageContainer.classList.remove("hideWinner_newGameButton")
-    disabledButtonboxes(); // diables buttons after winner is shown, invokes disablebuttonboxes function
+    if (winner === "O" || winner === "X") {
+        console.log("Winner is:", winner)
+        messageWinnerPlayer.innerHTML = `Congrats!🥳 Winner is '${winner}'`
+        messageContainer.classList.remove("hideWinner_newGameButton")
+        winnerSound();
+        disabledButtonboxes(); // diables buttons after winner is shown, invokes disablebuttonboxes function
+    }
 }
 
 
