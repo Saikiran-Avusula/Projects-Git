@@ -8,6 +8,7 @@ let messageWinnerPlayer = document.querySelector(".messageWinnerPlayer")
 
 // //player-X, player-O
 let turnO = true
+let count = 0
 
 //2d array to access every pattern of array button 
 // let array = [[0, 1, 2], [3, 4, 5], [6, 7, 8]] 
@@ -26,7 +27,7 @@ boxButtons.forEach((eachButtonBox) => {
 
     // console.log("hi")
     eachButtonBox.addEventListener("click", () => {
-        console.log("box is clicked")
+        // console.log("box is clicked")
         // print O or X base on condition
         if (turnO) { //player O
             eachButtonBox.innerHTML = "O"
@@ -39,16 +40,28 @@ boxButtons.forEach((eachButtonBox) => {
             turnO = true
         }
         eachButtonBox.disabled = true
-        checkWinner();
+        count++
+        let isWinner = checkWinner();
+        if (count === 9 && !isWinner) {
+            gameIsdraw()
+        }
     })
 })
+
+// to check game is draw function 
+const gameIsdraw = () => {
+    messageWinnerPlayer.innerHTML = `Game is Draw. Play Again!🤥`
+    messageContainer.classList.remove("hideWinner_newGameButton")
+    disabledButtonboxes();
+}
 
 
 // reset the game after the winner or in the middle of game
 const resetGame = () => {
     turnO = true;
+    count = 0
     // resetBtn.style.color = "red"
-    console.log("reset is trigged")
+    // console.log("reset is trigged")
     // enabled all disabled button after winner is shown
     enabledButtonboxes()
     // in reset state hidded WInner message
