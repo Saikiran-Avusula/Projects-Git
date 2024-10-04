@@ -14,6 +14,12 @@
     <!-- <h1></h1> -->
     <!-- creating Choices to select -->
     <h1>Rock Paper Scissor Game</h1>
+
+    <!-- audio section -->
+    <audio src="../multimedia_folder/audio/game-character-140506.mp3" id="soundForWinner"></audio>
+    <audio src="../multimedia_folder/audio/game-over-arcade-6435.mp3" id="soundForLost"></audio>
+    <audio src="../multimedia_folder/audio/game-start-6104.mp3" id="soundForDraw"></audio>
+    <audio src="../multimedia_folder/audio/90s-game-ui-6-185099.mp3" id="soundForRest"></audio>
     <div class="options">
         <div class="option" id="rock">
             <img src="./Media/rock.png" alt="Rock image" title="Rock Image">
@@ -27,24 +33,29 @@
     </div>
 
     <!-- score board -->
-    <div class=" score-borad">
-            <div class="score">
-                <p id="userScore">0</p>
-                <p>You</p>
-            </div>
-            <div class="score">
-                <p id="computerScore">0</p>
-                <p>Computer</p>
-                </p>
-            </div>
+    <div class="score-borad">
+        <div class="score">
+            <p id="userScore">0</p>
+            <p>You</p>
         </div>
-
-        <!-- for Messgae container to display message to get result-->
-        <div class="messageContainer">
-            <p id="messageText">Play your turns</p>
+        <div class="score">
+            <p id="computerScore">0</p>
+            <p>Computer</p>
+            </p>
         </div>
+    </div>
 
-        <script src="./RPS.js"></script>
+    <!-- for Messgae container to display message to get result-->
+    <div class="messageContainer">
+        <p id="messageText">Play your turns</p>
+        <!-- <button id="messageText">Play your turns</button> -->
+    </div>
+    <div class="messageContainer">
+        <p id="resetgameButton">Reset</p>
+        <!-- <button id="messageText">Play your turns</button> -->
+    </div>
+
+    <script src="./RPS.js"></script>
 </body>
 
 </html>

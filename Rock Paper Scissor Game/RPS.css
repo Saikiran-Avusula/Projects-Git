@@ -4,44 +4,82 @@
     text-align: center;
 }
 
+body {
+    background-color: rgba(34, 158, 162, 0.758);
+}
 
 h1 {
-    background-color: rgb(30, 3, 74);
-    color: white;
     line-height: 5rem;
-    height: 5rem;
-    /* width: 100%; */
-}
-
-img {
-    height: 200px;
-    width: 200px;
-    object-fit: cover;
-    border-radius: 55%;
-    border-color: black;
-}
-
-
-.options {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    margin-top: 5rem;
+    background-color: #000435;
+    color: whitesmoke;
 }
 
 .option {
+    /* border: 2px solid; */
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    border-radius: 50%;
-    border-color: black;
 }
 
-.option:hover {
-    /* opacity: 0.5; */
-    cursor: pointer;
-    background-color: black;
-    border: 5px solid;
+.options {
+    margin-top: 5rem;
+    /* border: 2px solid; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+img {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
+    object-fit: cover;
+}
+
+img:hover {
+    border: 5px solid #000435;
+    cursor: pointer;
+}
+
+.score-borad {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-top: 4rem;
+    gap: 3rem;
+}
+
+#userScore,
+#computerScore {
+    font-size: 3rem;
+}
+
+.messageContainer {
+    margin-top: 5rem;
+}
+
+#messageText {
+    background-color: #081b31;
+    color: whitesmoke;
+    font-size: 2rem;
+    display: inline;
+    padding: 1rem;
+    border-color: white;
+    border-radius: 1rem;
+}
+
+#resetgameButton {
+    background-color: #362a2a;
+    color: rgb(236, 13, 13);
+    font-size: 2rem;
+    display: inline;
+    padding: .5rem;
+    /* border-color: white; */
+    border-radius: 1rem;
+    cursor: pointer;
 }
