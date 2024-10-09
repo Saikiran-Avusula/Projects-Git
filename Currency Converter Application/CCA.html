@@ -5,10 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currency Converter Application</title>
+    <link rel="stylesheet" href="CCA.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <h1>Currency Converter Application</h1>
+    <div class="container">
+        <h1>
+            <u>
+                Currency Converter Application
+            </u>
+        </h1>
+        <form>
+            <div class="amountInput">
+                <p>Enter an amount</p>
+                <input type="text" name="" id="" placeholder="100">
+            </div>
+            <br>
+            <!-- dropdown section -->
+            <div class="dropdown">
+                <!-- from dropdown converter  -->
+                <div class="fromDropdown">
+                    <p>From</p>
+                    <div class="select-container">
+                        <!-- for diplaying flag images -->
+                        <img src="https://flagsapi.com/US/shiny/64.png" alt="">
+                        <select name="fromDropdown" id="fromDropdown">
+                            <option value="USD" selected>USD</option>
+                            <option value="INR">INR</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <!-- icon section  -->
+                <i class="fa-duotone fa-solid fa-arrows-rotate converter-icon"></i>
+
+
+                <!-- to dropdown converter -->
+                <div class="toDropdown">
+                    <p>To</p>
+                    <div class="select-container">
+                        <!-- for diplaying flag images -->
+                        <img src="https://flagsapi.com/IN/shiny/64.png" alt="">
+                        <select name="toDropdown" id="">
+                            <option value="USD">USD</option>
+                            <option value="INR" selected>INR</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="messgaeCurrency">1 USD = 80 INR</div>
+            <!-- like submit button -->
+            <button>Get Exchange Rate</button>
+        </form>
+    </div>
+
+
+    <script src="CCA.js"></script>
 </body>
 
 </html>
