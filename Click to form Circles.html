@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+</style>
+
+<body>
+    <h3>hello</h3>
+    <script defer>
+        const body = document.querySelector('body');
+
+        count = 0
+        body.addEventListener("click", (event) => {  //event is taken as arguement
+            const div = document.createElement('div'); // created element 'div'
+            const h3 = document.querySelector('h3')
+            div.style.position = 'absolute';// helps to create on target or clicked area 
+            div.style.border = "1px solid black";
+            div.style.width = '100px';
+            div.style.height = '100px';
+            div.style.borderRadius = '50%';
+            div.style.background = 'red';
+            div.style.left = `${event.clientX - 50}px`; // event is helps to in both cases Centering circle on click
+            div.style.top = `${event.clientY - 50}px`;
+            body.appendChild(div);
+            count++
+            console.log("Circle created at click position");
+            h3.innerHTML = `No. of circles created: ${count}`
+            console.log(`${count}`);
+        });
+
+        body.innerHTML = "Click on body";
+        body.style.textAlign = 'center';
+        body.style.width = "100%";
+        body.style.height = "100vh";  // cover the entire viewport
+        body.style.margin = "0";      // Removes any default margin
+    </script>
+</body>
+
+</html>

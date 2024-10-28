@@ -17,15 +17,20 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <script type="text/jsx">
-        const app = document.querySelector('#app')
-        // giving reactDOM to app
-     
-        const root = ReactDOM.createRoot(app)
-        root.render(<h1>Natural Farms</h1>)
+        function Header(){
+            return(
+    <h1>Natural Farms...!</h1>
+    )
+    }
 
 
 
+    const app = document.querySelector('#app')
+    // giving reactDOM to app
 
+    const root = ReactDOM.createRoot(app)
+
+    root.render(<Header/>)
     </script>
 
 
