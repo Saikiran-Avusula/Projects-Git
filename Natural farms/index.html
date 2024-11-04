@@ -16,34 +16,49 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <!-- <script> -->
+        <script type="text/jsx">
 
-    <script type="text/jsx">
+        // <!-- renderd the list used Keys -->
+        function Champions() {
+            const heros = [
+                {
+                    id: 1,
+                    name: 'Rohit',
+                    age: 35,
+                    score: 264
+                },
+                {
+                    id: 2,
+                    name: 'Virat',
+                    age: 30,
+                    score: 180
+                },
+                {
+                    id: 3,
+                    name: 'Rinku',
+                    age: 28,
+                    score: 100
+                }
+            ]
+            return (<>
+                <h1>Hello W.C Champions...!</h1>
+                <ol> {heros.map((eachHero => <li key={eachHero}> Name: {eachHero.name}, Higest Score: {eachHero.score}.</li>))}
+                </ol>
+
+                {heros.map((eachHero => <h1 key={eachHero.id}>{eachHero.id}. Name: {eachHero.name}, Higest Score:
+                    {eachHero.score}.</h1>))}
+
+            </>)
+        }
 
 
-    function Button() {
-    return (
-    <button onClick={color}>Click Me</button>
-    )
-    }
+        const app = document.querySelector('#app')
+        // giving reactDOM to app
 
-    function color(){
-        return (
-            <>
-            console.log("im clicked")
-            </>
-        )
-    }
+        const root = ReactDOM.createRoot(app) //basic root node
 
-
-
-
-    const app = document.querySelector('#app')
-    // giving reactDOM to app
-
-    const root = ReactDOM.createRoot(app) //basic root node
-
-    root.render(
-    <Button />)
+        root.render(
+            <Champions />)
     </script>
 
 
