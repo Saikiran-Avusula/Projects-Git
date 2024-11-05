@@ -16,7 +16,7 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <!-- <script> -->
-        <script type="text/jsx">
+    <script type="text/jsx">
 
         // <!-- renderd the list used Keys -->
         function Champions() {
@@ -48,9 +48,17 @@
                 {heros.map((eachHero => <h1 key={eachHero.id}>{eachHero.id}. Name: {eachHero.name}, Higest Score:
                     {eachHero.score}.</h1>))}
 
+                <Player name='Sai' age='20'/>   
+                <Player name='Sai' age='20'/>  
+
             </>)
         }
 
+        function Player({name, age}){
+            return(<>
+            <h1>Player: {name}, Age: {age} </h1>
+            </>)
+        }
 
         const app = document.querySelector('#app')
         // giving reactDOM to app

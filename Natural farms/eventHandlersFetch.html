@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // const recipes = fetch('https://dummyjson.com/recipes')
+        //     .then(e => e.json()).then(e => console.log(e))
+     
+        const recipesFetchData = async () => {
+            const data = await fetch('https://dummyjson.com/recipes')
+            const finalData = await data.json()
+            console.log(finalData);
+        }
+
+        // console.log(recipesFetchData);
+
+    </script>
+</body>
+
+</html>

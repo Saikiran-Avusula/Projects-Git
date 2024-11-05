@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Farms - event handlers</title>
+</head>
+
+<body>
+    <div id="app">
+    </div>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- <script> -->
+    <script type="text/jsx">
+
+
+        function Counter() {
+
+            let count = 0
+
+            function clickHandler() {
+                count++;
+                console.log(count)
+                document.getElementById('h1').innerHTML = "Count = "+count 
+            }
+
+            return (
+                <>
+                <h1 id='h1'>Count = {count} </h1>
+                <button onClick={clickHandler}>Click me</button>
+                </>
+            )
+        }
+
+
+
+        const app = document.querySelector('#app')
+        // giving reactDOM to app
+
+        const root = ReactDOM.createRoot(app) //basic root node
+
+        root.render(
+            <Counter />)
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Farms - useSate hooks</title>
+</head>
+
+<body>
+    <div id="app">
+    </div>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- <script> -->
+    <script type="text/babel">
+
+        function Counter() {
+            //   for using useState have to use with React.useState
+            const [count, setCount] = React.useState(0)
+
+            function Increment() {
+                setCount(++count)
+            }
+
+            function Decrement() {
+                if (count > 0) {
+                    setCount(--count)
+                } else
+                    alert("No negative value")
+            }
+
+            function Reset() {
+                setCount(0)
+            }
+
+            return (
+                <>
+                    <h1>Count = {count}</h1>
+                    <button onClick={Increment}>Click to Increment</button>
+                    <button onClick={Decrement}>Click to Decrement</button>
+                    <button onClick={Reset}>Click to Reset</button>
+                </>
+            )
+        }
+
+        const app = document.querySelector('#app')
+        // giving reactDOM to app
+
+        const root = ReactDOM.createRoot(app) //basic root node
+
+        root.render(
+            <Counter />)
+    </script>
+
+
+</body>
+
+</html>
