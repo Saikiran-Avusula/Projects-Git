@@ -1,14 +1,16 @@
 
-// import Header from './components/header'
+import Counter from './components/counter'
+import Header from './components/header'
 import ListOfProductsuseEffect from './components/useEffect'
-// import ProductList from './components/useState'
+import ProductsuseState from './components/useState'
 
 function App() {
   return (
     <>
-      {/* <Header />
-      <ProductList /> */}
-      <ListOfProductsuseEffect />
+      <Header />
+      {/* <ProductsuseState />
+      <ListOfProductsuseEffect /> */}
+      <Counter/>
     </>
   )
 }

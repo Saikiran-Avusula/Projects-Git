@@ -1810,7 +1810,7 @@ function ProductsuseState() {
 
     return (
         <>
-            <h2>List of Products</h2>
+            <h2>List of Products using useState() hook</h2>
             {
                 prods.products.map((item) => {
                     return (
