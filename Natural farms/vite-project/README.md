@@ -23,3 +23,12 @@ before leaving company => ? 3. componentWillUnmount()
 (component ni origonal DOM remove chesa mundu chese actions/perform logic)
  - return ur laptop 
 
+
+oka component lo first context create cheyali, ante value anuko or state(gloabal state or golabal value)
+
+//context => state (globabal state) -> for creating it used => createContext  function use chestham, it retuens an object that is "State"
+
+e state ni top level lo componenet ki attcah chesthe it provide all it's childerns. So, by it can be accessble for for all it's childerns 
+
+So, createContext function ni use chesi "state" tesukunnam, it has a property called -> "Provider" 
+Now, we have to warp the parent componenet init, by wraping it 

@@ -1,16 +1,28 @@
 
-import Counter from './components/counter'
-import Header from './components/header'
-import ListOfProductsuseEffect from './components/useEffect'
-import ProductsuseState from './components/useState'
+// import Counter from './components/CoponentWIllUnMount/counter'
+// import Timer from './components/ComponentWIllUnMount/timer'
+import Header from './components/ComponentWIllUnMount/Product Listing(useState , useEffect , fetch api )/headerProduct'
+import ProductList from './components/ComponentWIllUnMount/Product Listing(useState , useEffect , fetch api )/ProductList'
+// import Toggler from './components/ComponentWIllUnMount/toggler'
+// import ListOfProductsuseEffect from './components/useEffect'
+// import ProductsuseState from './components/useState'
 
 function App() {
   return (
     <>
-      <Header />
+      {/* <Counter /> */}
       {/* <ProductsuseState />
       <ListOfProductsuseEffect /> */}
-      <Counter/>
+      {/* <Counter/> */}
+
+      {/* ComponentWIllUnMount check, functions of counter & toggler in same folder includes useEffect & cleanup function why is used*/}
+      {/* <Toggler /> */}
+      {/* <Timer /> */}
+
+
+      {/* Product listing by Raghu - using useState , useEffect , fetch api  */}
+        
+      <ProductList />
     </>
   )
 }

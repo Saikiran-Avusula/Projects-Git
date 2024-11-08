@@ -1,0 +1,56 @@
+/* styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    border: 2px solid burlywood;
+    border-radius: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 28rem;
+    display: inline-flex;
+    flex-direction: column;
+    margin: 1rem;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    gap: 1rem;
+    text-align: center;
+}
+
+#cartButton {
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    color: red;
+    margin-bottom: 1rem;
+    font-size: medium;
+    /* width: 50px; */
+    padding: .5rem;
+}
+
+.price {
+    border: 1px solid;
+    padding: .5rem;
+    border-radius: 1rem;
+}
+
+span {
+    font-weight: bold;
+}
+
+/* header coponenet */
+.Header {
+    color: red;
+    text-align: center;
+    background-color: antiquewhite;
+    position: fixed;
+    width: 100vw;
+}
+
+.productSet {
+    margin-bottom: 100px;
+}

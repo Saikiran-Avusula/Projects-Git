@@ -3,19 +3,17 @@ import { useEffect, useState } from "react";
 function Counter() {
 
     const [count, setCount] = useState(0)
-    let c = 0
     useEffect(() => {
-        c++
-        console.log("useEffect is executed", c);
-    }, [count, c])
+        console.log("useEffect is executed");
+        return () => {
+            console.log("useEffect is cleaned up (cop. Will UnMount)");
+        }
+    }, [count])
 
 
     function ClickHandler() {
-        setCount(1)
+        setCount(count + 1)  
     }
-
-
-
 
     return (
         <>
