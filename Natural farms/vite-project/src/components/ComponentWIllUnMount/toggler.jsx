@@ -11,7 +11,6 @@ function Toggler() {
         setFlag(!flag)
     }
 
-
     return (
         <>
             {flag ? <Timer /> : <h3 style={{ backgroundColor: "blue" }}>Good Night...!</h3>}

@@ -2,7 +2,6 @@ import { useEffect, useState } from "react"
 
 function Timer() {
 
-
     const [date, setDate] = useState(new Date())
 
     // ekada useffect ni prathi render ki re-render chey n=mani chepthunam
