@@ -7,10 +7,14 @@
 // import Toggler from './components/ComponentWIllUnMount/toggler'
 // import ListOfProductsuseEffect from './components/useEffect'
 // import ProductsuseState from './components/useState'
-import { userContext } from './components/Context/userContext'
-import { userThemeContext } from './components/Context/userThemeContext'
-import CompB_Context from './components/Context/compBContext'
-import CompC_Context from './components/Context/compCContext'
+
+import CounterReducer from "./components/ComponentWIllUnMount/Reducer/useReducer_counter"
+
+// import { userThemeContext } from './components/Context/userThemeContext'
+// import CompA_Context from './components/Context/compAContext'
+// import CompB_Context from './components/Context/compBContext'
+// import CompC_Context from './components/Context/compCContext'
+
 
 function App() {
   return (
@@ -35,14 +39,18 @@ function App() {
 
       {/* Concept : context  */}
       {/* Stage2: Multiple context  */}
-      <userContext.Provider value={`Sai-Kiran - passed as guest from create context file - {Provider}`}>
-        <userThemeContext.Provider value={"Dark Mode"}>
+      {/* <userThemeContext.Provider value='Kiran from App.jsx'>
+
+        <userThemeContext.Provider value={"Dark Mode from App.jsx"}>
+          <CompA_Context />
           <CompB_Context />
           <CompC_Context />
         </userThemeContext.Provider>
-      </userContext.Provider>
+      </userThemeContext.Provider> */}
 
 
+      {/* counter using Reduser and useReducer */}
+      <CounterReducer />
     </>
   )
 }

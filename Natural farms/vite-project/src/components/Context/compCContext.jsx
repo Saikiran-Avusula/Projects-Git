@@ -1,4 +1,5 @@
 import { useContext } from "react"
+
 import { userContext } from "./userContext"
 import { userThemeContext } from "./userThemeContext"
 
@@ -8,7 +9,7 @@ function CompC_Context() {
     return (
         <>
             <h1 >Component C as Consumer, Displaying: {useContext_Value}</h1>
-            <h2>{userThemeContext_Value}</h2>
+            <h2>Component C - Theme Context: {userThemeContext_Value}</h2>
         </>
     )
 }

@@ -7,7 +7,10 @@ function CompB_Context() {
 
     return (
         <>
-            <h1 >Component B  as Consumer , Displaying: {useContext_Value}</h1>
+
+            <userContext.Provider value="Hello from B">
+                <h1 >Component B  as Consumer , Displaying: {useContext_Value}</h1>
+            </userContext.Provider>
 
             {/* Another way - but it's a headache */}
             {/* <userContext.Consumer>
