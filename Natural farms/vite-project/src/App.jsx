@@ -20,6 +20,8 @@ import HeaderMain from "./components/header"
 import ElementA from "./components/context+render/elementsToRender/elementA"
 import { useReducer } from "react"
 import { cartContext } from "./components/context+render/elementsToRender/cartContext"
+import { reducerContext } from "./components/context+render/elementsToRender/reducerCOntext"
+import ElementC from "./components/context+render/elementsToRender/elementC"
 
 
 
@@ -27,16 +29,16 @@ const initialState = {
   count: 0
 }
 
-const Reducer = (state, action)=>{
-  switch(action.type){
-    case 'ADD': return {count: state.count+1}
-    case 'REMOVE': return {count: state.count-1}
-    default :return state
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'ADD': return { count: state.count + 1 }
+    case 'REMOVE': return { count: state.count - 1 }
+    default: return state
   }
 }
 
 function App() {
-const[state, dispatch]=useReducer(Reducer, initialState)
+  const [state, dispatch] = useReducer(reducer, initialState)
   return (
     <>
       {/* <Counter /> */}
@@ -81,12 +83,20 @@ const[state, dispatch]=useReducer(Reducer, initialState)
       {/* <CustomShop /> */}
 
 
-      {/* context+ reducer : here, app.jsx acts as top element to share the data to its childs*/ }
+      {/* context+ reducer : here, app.jsx acts as top element to share the data to its childs*/}
       {/* wrapping those into cartContext.Provider */}
 
-      <cartContext.Provider value={state}>  {/**we maintaining the state, provided state to cartContext */}
-        <HeaderMain/>
-        <ElementA/>
+
+      {/* add to cart feature using simple count values (hard codded values) */}
+      <cartContext.Provider value={state.count}>  {/**we maintaining the state, provided state to cartContext */}
+        <reducerContext.Provider value={dispatch}> { /* SO, i'm adding a cart button to element c, were as i can add that in any element. Provided separate context to it */}
+          {/* So, For element C created new reducerContext, to pass the state infomation stored & wrapped into main cart context  */}
+          <HeaderMain />
+          <ElementA />
+          <ElementC />
+          <button onClick={() => dispatch({ type: 'ADD' })}>Add to Cart</button>
+          <button onClick={() => dispatch({ type: 'REMOVE' })}>Delete Item</button>
+        </reducerContext.Provider>
       </cartContext.Provider>
 
 
