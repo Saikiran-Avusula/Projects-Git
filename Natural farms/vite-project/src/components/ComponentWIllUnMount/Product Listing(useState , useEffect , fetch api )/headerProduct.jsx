@@ -1,11 +1,11 @@
 import './productStyleTemplate.css'
 
-function Header() {
+function HeaderForProducts() {
     return (
-        <div style={{ marginBottom: '100px' }}>
-            <h1 className="Header">List of Products</h1>
+        <div >
+            <h1 className="HeaderList" >List of Products</h1>
         </div>
     )
 }
 
-export default Header
+export default HeaderForProducts
