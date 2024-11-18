@@ -17,13 +17,15 @@ const windValueTxt = document.querySelector('.wind-value-txt')
 const weatherSummaryImg = document.querySelector('.weather-summary-img');
 const currentDateTxt = document.querySelector('.current-date-txt')
 
+const forecastItemsContainer = document.querySelector('.forecast-items-container')
+
 const apiKey = '3c0b807e7a1c1c032bf73ae6dfe40880'
 
 searchBtn.addEventListener("click", () => {
     // console.log("Search btn is clicked");
     if (cityInput.value.trim() != '') { //removes extra spaces
         updateWeatherInfo(cityInput.value)
-        cityInput.value = ''; //after clcking search btn input bix will be empty 
+        cityInput.value = ''; //after clicking search btn input box will be empty 
         cityInput.blur();
     }
 })
@@ -60,11 +62,15 @@ function getWeatherIcon(id) {
 
 function getCurrentDate() {
     const currentDate = new Date()
-    const options = {
-        weekday: `short`
-    }
-    
     console.log(currentDate);
+
+    const options = {
+        weekday: `short`,
+        day: '2-digit',
+        month: 'short'
+    }
+
+    return currentDate.toLocaleDateString('en-GB', options)
 
 }
 
@@ -92,12 +98,66 @@ async function updateWeatherInfo(city) {
     tempTxt.textContent = `${Math.round(temp)} °C`
     conditionTxt.textContent = `${main}`
     humidityValueTxt.textContent = `${humidity} %`
-    weatherSummaryImg.innerHTML = `media/assets/weather/${getWeatherIcon(id)}`
+    weatherSummaryImg.src = `media/assets/weather/${getWeatherIcon(id)}`
     windValueTxt.textContent = `${speed} M/s`
-    currentDateTxt.textContent = getCurrentDate()
 
+
+    currentDateTxt.textContent = getCurrentDate() //displlays date using function getCurrentDate()
+    console.log(currentDateTxt);
 
     showDisplaySection(weatherInfoSection)
+
+    // Now list of weather to display
+    // await updateWeatherInfo(city)
+}
+
+
+//list of data, i think rendering problem. 
+// async function updateWeatherInfo(city) {
+//     const forecastData = await getFetchData('forecast', city)
+//     const timeTaken = '12:00:00'
+//     const todayDate = new Date().toISOString().split('T')[0]
+
+
+//     forecastItemsContainer.innerHTML = ''
+//     forecastData.list.forEach(forecastWeather => {
+//         if (forecastWeather.dt_txt.includes(timeTaken)
+//             && forecastWeather.dt_txt.includes(todayDate)) {
+//             updateForecastItems(forecastWeather)
+//             console.log(forecastWeather);
+//         }
+
+//     })
+//     console.log(todayDate);
+//     console.log(forecastData); // displays list of dadta
+
+// }
+
+function updateForecastItems(weatherData) {
+    console.log(weatherData);
+    const {
+        dt_txt: date,
+        weather: [{ id }],
+        main: { temp },
+    } = weatherData
+
+    //seting date for cards
+    const dateTaken = new Date()
+    const dateOption = {
+        day: '2-digit',
+        month: 'short'
+    }
+
+    const dateResult = dateTaken.toLocaleDateString('en-US', dateOption)
+
+    const forecastItem = `    
+    <div class="forecast-item">
+        <h5 class="forecast-item-date regular-txt">${dateResult}</h5>
+        <img src="./media/assets/weather/${getWeatherIcon(id)}" alt="thunderstorm-img" class="forecast-item-img">
+        <h5 class="forecast-item-temp">${Math.round(temp)}°C</h5>
+    </div>`
+
+    forecastItemsContainer.insertAdjacentHTML('beforeend', forecastItem)
 }
 
 function showDisplaySection(section) {
