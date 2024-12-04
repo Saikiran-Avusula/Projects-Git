@@ -1,7 +1,13 @@
-export default function App() {
+import Navbar from "./Components/Navbar";
+
+const App = () => {
   return (
-    <h1 className="text-4xl font-bold underline text-red-500">
-      Hello world!
-    </h1>
+    <>
+      <div className="bg-[#0e0c1e]">
+
+        <Navbar />        {/* imported Nav bar */}
+      </div>
+    </>
   )
 }
+export default App; // export default App;
