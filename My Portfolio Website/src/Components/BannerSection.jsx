@@ -1,8 +1,8 @@
 // import { avatar } from '../assets/Avatar.png'
 import avatar from '../assets/Avatar.png'
-import { motion } from 'react'
+// import { motion } from 'react'
 
-const LogoText = () => {
+const BannerSection = () => {
     return (
         <>
             <div className="text-white py-10">
@@ -23,4 +23,4 @@ const LogoText = () => {
         </>)
 }
 
-export default LogoText
+export default BannerSection
