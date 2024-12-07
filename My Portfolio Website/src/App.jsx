@@ -1,4 +1,5 @@
-import BannerSection from "./Components/BannerSection";
+import About from "./Components/About";
+import Main from "./Components/Main";
 import Navbar from "./Components/Navbar";
 
 const App = () => {
@@ -7,7 +8,8 @@ const App = () => {
       {/* <div className="bg-[#0e0c1e] 	backdrop-blur-blur(8px)"> */}
       <div className="backdrop-blur bg-black/80">
         <Navbar />        {/* imported Nav bar */}
-        <BannerSection />
+        <Main />
+        <About />
 
 
       </div>

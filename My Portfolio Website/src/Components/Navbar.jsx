@@ -33,7 +33,7 @@ const Navbar = () => {
     return (
         <>
             <div>
-                <div>
+                <div className="Navbar">
                     <div className=" mx-auto hidden md:flex justify-evenly py-3 items-center border rounded-full">
                         <div className="text-xl lg:text-2xl font-bold flex items-center gap-1">
                             <a href="">
