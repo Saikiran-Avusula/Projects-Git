@@ -31,7 +31,7 @@ const Work = () => {
                 <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px8'>
                     <h2 className='text-4xl text-white underline font-bold text-center mb-12'>My Work</h2>
                     <p className='mb-12 text-gray-400 text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero praesentium modi itaque, aperiam totam consequuntur quia nesciunt similique temporibus dolores. Iure ipsum adipisci, delectus praesentium quae doloribus placeat modi minima?</p>
-                    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 border flex justify-center items-center'>
+                    <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
                         {projects.map((eachProject) => (
                             <div key={eachProject.id} className='bg-gray-900 shawdow-lg rounded-lg overflow-hidden '>
                                 <img src={eachProject.image} alt={eachProject.title} className='w-full h-48 object-cover' />
