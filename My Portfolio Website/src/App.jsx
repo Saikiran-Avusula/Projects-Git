@@ -1,9 +1,10 @@
 import About from "./Components/About";
-import Contact from "./Components/Contact";
+import Connect_Me from "./Components/Connect_Me";
+import Footer from "./Components/Footer";
 import Main from "./Components/Main";
 import Navbar from "./Components/Navbar";
 import Skills from "./Components/Skills";
-import Work from "./Components/Work";
+import Projects from "./Components/Projects";
 
 const App = () => {
   return (
@@ -13,10 +14,10 @@ const App = () => {
         <Navbar />        {/* imported Nav bar */}
         <Main />
         <About />
-        <Work />
+        <Projects />
         <Skills />
-        <Contact />
-
+        <Connect_Me />
+        <Footer />
       </div>
     </>
   )

@@ -1,6 +1,6 @@
 import project1 from '../assets/enchanced bike sai.png'
 
-const Work = () => {
+const Projects = () => {
 
     const projects = [
         {
@@ -27,9 +27,9 @@ const Work = () => {
     ]
     return (
         <>
-            <div className='py-12'>
+            <div id='projects' className='py-12'>
                 <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px8'>
-                    <h2 className='text-4xl text-white underline font-bold text-center mb-12'>My Work</h2>
+                    <h2 className='text-4xl text-white underline font-bold text-center mb-12'>My Projects/Work</h2>
                     <p className='mb-12 text-gray-400 text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero praesentium modi itaque, aperiam totam consequuntur quia nesciunt similique temporibus dolores. Iure ipsum adipisci, delectus praesentium quae doloribus placeat modi minima?</p>
                     <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
                         {projects.map((eachProject) => (
@@ -49,4 +49,4 @@ const Work = () => {
     )
 }
 
-export default Work;
+export default Projects;

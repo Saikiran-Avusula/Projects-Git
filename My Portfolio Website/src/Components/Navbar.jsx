@@ -5,6 +5,7 @@ import { CgMenu } from "react-icons/cg";
 import { IoClose } from "react-icons/io5";
 import { motion } from 'motion/react';
 // import { resume } from '../assets/Sai Kiran Avusula Resume (E).pdf'
+import { Link } from 'react-scroll'
 
 
 const Navbar = () => {
@@ -24,19 +25,20 @@ const Navbar = () => {
 
     // for menu items to display collected in array of objects stored and mapped each of them
     const textItems = [
-        { id: 1, text: "About" },
-        { id: 2, text: "Services" },
-        { id: 3, text: "Contact Me" },
-        { id: 4, text: "Services" }
+        { id: 1, text: "About", to: "about" },
+        { id: 2, text: "Projects", to: "projects" },
+        { id: 3, text: "Skills", to: "skills" },
+        { id: 4, text: "Connect Me", to: "connect_me" },
+        { id: 5, text: "Navbar", to: "navbar" }
     ]
 
     return (
         <>
             <div>
-                <div className="Navbar">
+                <div id="navbar" className="Navbar">
                     <div className=" mx-auto hidden md:flex justify-evenly py-3 items-center border rounded-full">
                         <div className="text-xl lg:text-2xl font-bold flex items-center gap-1">
-                            <a href="">
+                            <a href="" title="Sai Kiran Avusula Portfolio">
                                 <span className="text-white">My</span>
                                 <span className="text-red-500"> Portfolio</span>
                             </a>
@@ -48,11 +50,16 @@ const Navbar = () => {
                                     <li>Services</li>
                                     <li>My Work</li>
                                     <li>Connnect Me</li> */}
-                                    {textItems.map(({ id, text }) => <li key={id} className="hover:text-red-500 cursor-pointer duration-300">{text}</li>)}
+                                    {textItems.map(({ id, text, to }) =>
+                                        <li key={id} className="hover:text-red-500 cursor-pointer duration-300">
+                                            <Link to={to} smooth={true} duration={500} offset={-70}>
+                                                {text}
+                                            </Link>
+                                        </li>)}
                                 </ul>
                             </div>
                         </div>
-                        <a href='../' title='Download Resume' className="md:text-base lg:text-lg bg-red-500 hover:bg-white hover:text-red-500 text-white px-4 py-2 rounded-full duration-500" >Download Resume</a>
+                        <a href='' title='Download Resume' className=" md:text-base lg:text-lg bg-red-500 hover:bg-white hover:text-red-500 text-white px-4 py-2 rounded-full duration-500" >Download Resume</a>
                     </div>
                 </div>
 
@@ -68,9 +75,14 @@ const Navbar = () => {
                             {menu && (
                                 <div className="flex flex-col p-6 justify-space items-center backdrop-blur-sm bg-white/20 h-screen rounded-r-lg ">
                                     <ul className="space-y-6 text-white text-lg text-center">
-                                        {textItems.map(({ id, text }) => <li key={id} className=" hover:text-red-500 cursor-pointer duration-300">{text}</li>)}
+                                        {textItems.map(({ id, text, to }) =>
+                                            <li key={id} className=" hover:text-red-500 cursor-pointer duration-300">
+                                                <Link to={to} smooth={true} duration={500} offset={-70}>
+                                                    {text}
+                                                </Link>
+                                            </li>)}
                                     </ul>
-                                    <a href="" className="text-lg bg-red-500 hover:bg-white hover:text-red-500 text-white px-2 py-1 mt-6 rounded-full duration-500">Download Resume</a>
+                                    <a href='' className="text-lg bg-red-500 hover:bg-white hover:text-red-500 text-white px-2 py-1 mt-6 rounded-full duration-500 download" title="Click to Download">Download Resume</a>
                                 </div>
                             )}
                         </motion.div>
