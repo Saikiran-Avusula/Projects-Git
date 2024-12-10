@@ -17,28 +17,41 @@
 // import CompC_Context from './components/Context/compCContext'
 
 import HeaderMain from "./components/header"
-import ElementA from "./components/context+render/elementsToRender/elementA"
-import { useReducer } from "react"
-import { cartContext } from "./components/context+render/elementsToRender/cartContext"
-import { reducerContext } from "./components/context+render/elementsToRender/reducerCOntext"
-import ElementC from "./components/context+render/elementsToRender/elementC"
+// import ElementA from "./components/context+render/elementsToRender/elementA"
+// import { useReducer } from "react"
+// import { cartContext } from "./components/context+render/elementsToRender/cartContext"
+// import { reducerContext } from "./components/context+render/elementsToRender/reducerCOntext"
+// import ElementC from "./components/context+render/elementsToRender/elementC"
 
 
 
-const initialState = {
-  count: 0
-}
 
-const reducer = (state, action) => {
-  switch (action.type) {
-    case 'ADD': return { count: state.count + 1 }
-    case 'REMOVE': return { count: state.count - 1 }
-    default: return state
-  }
-}
+
+
+
+// Importing react router DOM related Stuff
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import Home from "./components/React Router DOM/Home"
+import Checkout from "./components/React Router DOM/Checkout"
+import Services from "./components/React Router DOM/Services"
+
+
+
+
+// const initialState = {
+//   count: 0
+// }
+
+// const reducer = (state, action) => {
+//   switch (action.type) {
+//     case 'ADD': return { count: state.count + 1 }
+//     case 'REMOVE': return { count: state.count - 1 }
+//     default: return state
+//   }
+// }
 
 function App() {
-  const [state, dispatch] = useReducer(reducer, initialState)
+  // const [state, dispatch] = useReducer(reducer, initialState)
   return (
     <>
       {/* <Counter /> */}
@@ -88,17 +101,45 @@ function App() {
 
 
       {/* add to cart feature using simple count values (hard codded values) */}
-      <cartContext.Provider value={state.count}>  {/**we maintaining the state, provided state to cartContext */}
-        <reducerContext.Provider value={dispatch}> { /* SO, i'm adding a cart button to element c, were as i can add that in any element. Provided separate context to it */}
-          {/* So, For element C created new reducerContext, to pass the state infomation stored & wrapped into main cart context  */}
-          <HeaderMain />
+      {/* <cartContext.Provider value={state.count}> */}
+      {/**we maintaining the state, provided state to cartContext */}
+      {/* <reducerContext.Provider value={dispatch}> */}
+      { /* SO, i'm adding a cart button to element c, were as i can add that in any element. Provided separate context to it */}
+      {/* So, For element C created new reducerContext, to pass the state infomation stored & wrapped into main cart context  */}
+      {/* <HeaderMain />
           <ElementA />
           <ElementC />
           <button onClick={() => dispatch({ type: 'ADD' })}>Add to Cart</button>
-          <button onClick={() => dispatch({ type: 'REMOVE' })}>Delete Item</button>
-        </reducerContext.Provider>
-      </cartContext.Provider>
+          <button onClick={() => dispatch({ type: 'REMOVE' })}>Delete Item</button> */}
+      {/* </reducerContext.Provider> */}
+      {/* </cartContext.Provider> */}
 
+      {/* Reacr Router DOM implemenataion */}
+      {/* 1. Install React-router DOM from Node.js
+          2. Import BrowserRouter, Router, Routes, Link from react 
+          3.
+      */}
+
+      <BrowserRouter>
+        <nav>
+          <ol>
+            <li>
+              <Link to='/'>Home</Link>
+            </li>
+            <li>
+              <Link to='/checkout'>Checkout</Link>
+            </li>
+            <li>
+              <Link to='/services'>Services</Link>
+            </li>
+          </ol>
+        </nav>
+        <Routes>
+          <Route path='/' element={<><Home /><HeaderMain /></>} />
+          <Route path='/checkout' element={<Checkout />} />
+          <Route path='/services' element={<Services />} />
+        </Routes>
+      </BrowserRouter>
 
     </>
   )
