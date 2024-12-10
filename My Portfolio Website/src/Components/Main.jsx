@@ -1,4 +1,3 @@
-
 import avatar from '../assets/kiranAIImage.png'
 import { Link } from 'react-scroll'
 

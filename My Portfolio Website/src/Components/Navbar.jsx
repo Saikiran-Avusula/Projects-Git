@@ -70,13 +70,13 @@ const Navbar = () => {
                 <div className="flex md:hidden md:bg-black justify-between border rounded-full backdrop-blur bg-black/10">
                     {/* backdrop-blur bg-black/30 */}
                     <motion.div animate={menu ? "open" : "closed"}>
-                        <motion.div onClick={() => setMenu((preview) => !preview)} className="w-2/4 h-screen text-black fixed z-10 rounded-r-lg" >
+                        <motion.div onClick={() => setMenu((preview) => !preview)} className="w-2/4  text-black fixed z-10 rounded-r-lg" >
                             <div className="px-7 py-5 ">
                                 {menu ? (<IoClose size={35} className="text-red-500 " />) : (<CgMenu size={35} className="hover:text-red-500 text-white" />)}
                             </div>
 
                             {menu && (
-                                <div className="flex flex-col p-6 justify-space items-center backdrop-blur-sm bg-white/20 h-screen rounded-r-lg ">
+                                <div className="flex flex-col p-6 justify-space items-center backdrop-blur-lg bg-black/80 h-screen rounded-r-lg">
                                     <ul className="space-y-6 text-white text-lg text-center">
                                         {textItems.map(({ id, text, to }) =>
                                             <li key={id} className=" hover:text-red-500 cursor-pointer duration-300">

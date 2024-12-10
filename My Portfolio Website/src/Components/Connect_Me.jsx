@@ -12,12 +12,14 @@ export default function Connect_Me() {
                 <p className="text-slate-400 mt-4 flex flex-wrap">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium suscipit, tempora recusandae sapiente enim quaerat similique veritatis tenetur soluta optio et reiciendis dolorum quis quidem quia natus, odio perspiciatis sequi.</p>
             </div>
 
-            <div className="max-w-6xl mx-auto mt-2 flex gap-5 flex-wrap" >
+            {/* <div className="max-w-6xl mx-auto mt-2 flex gap-5  justify-center border" > */}
+            <div className="grid grid-cols justify-center gap-5">
+
 
                 {/* Phone */}
-                <div className="flex items-center space-x-2">
+                <div className="flex justify-center space-x-2 flex-wrap">
                     <div className="bg-red-500 p-4 rounded-full">
-                        <FaPhoneAlt className="text-white w- h-5" />
+                        <FaPhoneAlt className="text-white" />
                     </div>
                     <div className="flex items-center gap-1">
                         <p className="text-lg font-medium text-red-500 ">Connect me:</p>
@@ -31,9 +33,9 @@ export default function Connect_Me() {
 
 
                 {/* Mail */}
-                <div className="flex items-center space-x-2">
+                <div className="flex justify-center space-x-2 flex-wrap gap-2">
                     <div className="bg-red-500 p-4 rounded-full">
-                        <MdAttachEmail className="text-white w- h-5" />
+                        <MdAttachEmail className="text-white" />
                     </div>
                     <div className="flex items-center gap-1">
                         <p className="text-lg font-medium text-red-500">Mail:</p>
