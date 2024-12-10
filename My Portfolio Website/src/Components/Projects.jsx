@@ -34,7 +34,7 @@ const Projects = () => {
             <div id='projects' className='py-12'>
                 <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px8'>
                     <h2 className='text-4xl text-white underline font-bold text-center mb-12'>My Projects/Work</h2>
-                    <p className='mb-12 text-gray-400 text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero praesentium modi itaque, aperiam totam consequuntur quia nesciunt similique temporibus dolores. Iure ipsum adipisci, delectus praesentium quae doloribus placeat modi minima?</p>
+                    <p className='mb-12 text-gray-400 text-center'>Here are some of the projects I’ve developed, showcasing my skills in web development and problem-solving. Each project reflects my commitment to delivering efficient, user-friendly solutions while leveraging technologies like React.js, JavaScript, and APIs.</p>
                     <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
                         {projects.map((eachProject) => (
                             <div key={eachProject.id} className='shawdow-lg rounded-lg overflow-hidden backdrop-blur bg-black/1 cursor-pointer'>

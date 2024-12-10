@@ -9,7 +9,7 @@ export default function Connect_Me() {
         <div id="connect_me" className="grid">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-12">
                 <h2 className="text-4xl font-bold text-white">Let&apos;s <span className="text-red-500">Connect :)</span></h2>
-                <p className="text-slate-400 mt-4 flex flex-wrap">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium suscipit, tempora recusandae sapiente enim quaerat similique veritatis tenetur soluta optio et reiciendis dolorum quis quidem quia natus, odio perspiciatis sequi.</p>
+                <p className="text-slate-400 mt-4 flex flex-wrap">I’m always open to meaningful conversations and professional opportunities. Whether you’d like to discuss a project, share insights, or explore potential collaborations, feel free to reach out. Let’s connect and create impactful solutions together!</p>
             </div>
 
             {/* <div className="max-w-6xl mx-auto mt-2 flex gap-5  justify-center border" > */}
