@@ -1,4 +1,4 @@
-// import { avatar } from '../assets/Avatar.png'
+
 import avatar from '../assets/kiranAIImage.png'
 import { Link } from 'react-scroll'
 

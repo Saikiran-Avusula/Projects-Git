@@ -28,15 +28,18 @@ const Navbar = () => {
         { id: 1, text: "About", to: "about" },
         { id: 2, text: "Projects", to: "projects" },
         { id: 3, text: "Skills", to: "skills" },
-        { id: 4, text: "Connect Me", to: "connect_me" },
-        { id: 5, text: "Navbar", to: "navbar" }
+        { id: 4, text: "Connect Me", to: "connect_me" }
     ]
+
+    const resumeHandlerButton = () => {
+        window.open('/Sai Kiran Avusula Rssume (E).pdf', '_blank')
+    }
 
     return (
         <>
             <div>
                 <div id="navbar" className="Navbar">
-                    <div className=" mx-auto hidden md:flex justify-evenly py-3 items-center border rounded-full">
+                    <div className=" mx-auto hidden md:flex justify-evenly py-3 items-center border rounded-full backdrop-blur bg-black/1">
                         <div className="text-xl lg:text-2xl font-bold flex items-center gap-1">
                             <a href="" title="Sai Kiran Avusula Portfolio">
                                 <span className="text-white">My</span>
@@ -59,12 +62,12 @@ const Navbar = () => {
                                 </ul>
                             </div>
                         </div>
-                        <a href='' title='Download Resume' className=" md:text-base lg:text-lg bg-red-500 hover:bg-white hover:text-red-500 text-white px-4 py-2 rounded-full duration-500" >Download Resume</a>
+                        <a href='' onClick={resumeHandlerButton} title='View My Resume' className=" md:text-base lg:text-lg bg-red-500 hover:bg-white hover:text-red-500 text-white px-4 py-2 rounded-full duration-500" >My Resume</a>
                     </div>
                 </div>
 
                 {/* Hambuger icon */}
-                <div className="flex md:hidden md:bg-black justify-between border rounded-full">
+                <div className="flex md:hidden md:bg-black justify-between border rounded-full backdrop-blur bg-black/10">
                     {/* backdrop-blur bg-black/30 */}
                     <motion.div animate={menu ? "open" : "closed"}>
                         <motion.div onClick={() => setMenu((preview) => !preview)} className="w-2/4 h-screen text-black fixed z-10 rounded-r-lg" >
@@ -82,7 +85,7 @@ const Navbar = () => {
                                                 </Link>
                                             </li>)}
                                     </ul>
-                                    <a href='' className="text-lg bg-red-500 hover:bg-white hover:text-red-500 text-white px-2 py-1 mt-6 rounded-full duration-500 download" title="Click to Download">Download Resume</a>
+                                    <a onClick={resumeHandlerButton} className="text-lg bg-red-500 hover:bg-white hover:text-red-500 text-white px-2 py-1 mt-6 rounded-full duration-500 download" title="View My Download">My Resume</a>
                                 </div>
                             )}
                         </motion.div>

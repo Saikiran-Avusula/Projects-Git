@@ -1,30 +1,34 @@
-import project1 from '../assets/enchanced bike sai.png'
+import WeatherApp from '/WeatherApp.png'
+import WaterReminderApp from '/WaterReminderApp.png'
+import NovemberStaticTemplate from '/NovemberStaticTemplate.png'
+// import { link } from 'motion/react-client'
 
 const Projects = () => {
 
     const projects = [
         {
             id: 1,
-            title: "Project1",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum placeat aliquam laudantium labore rem provident doloremque, ratione eos, sed sapiente architecto assumenda vitae. Corrupti, accusantium labore. Nulla tempore dolorem soluta!",
-            image: project1,
-            link: "#"
+            title: "Weather Application",
+            // description: 'I developed a responsive "Weather Application" using HTML, CSS, JavaScript, and the Open Weather API. The app displays real-time weather data, including temperature, humidity, and wind speed, along with dynamic icons for enhanced visual appeal. It features a clean and user-friendly interface, with error handling for a seamless experience. Asynchronous JavaScript was utilized to fetch data quickly and accurately, ensuring compatibility across various devices',
+            image: WeatherApp,
+            link: "https://saikiran-avusula.github.io/Projects-Git/Weather%20App/indexWeather.html"
         },
         {
             id: 2,
-            title: "Project2",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum placeat aliquam laudantium labore rem provident doloremque, ratione eos, sed sapiente architecto assumenda vitae. Corrupti, accusantium labore. Nulla tempore dolorem soluta!",
-            image: project1,
-            link: "#"
+            title: "Water Reminder Application",
+            // description: 'I developed a "Water Reminder Application" using HTML, CSS, JavaScript, and Bootstrap to provide personalized notifications and reminders. The app features user-friendly interfaces, seamless performance monitoring, and integrated alerts to ensure a smooth experience across various devices and platforms. I also debugged front-end issues to enhance overall functionality and usability.',
+            image: WaterReminderApp,
+            link: "https://saikiran-avusula.github.io/Projects-Git/Water%20Reminder%20Application/first_page.html"
         },
         {
             id: 3,
-            title: "Project3",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum placeat aliquam laudantium labore rem provident doloremque, ratione eos, sed sapiente architecto assumenda vitae. Corrupti, accusantium labore. Nulla tempore dolorem soluta!",
-            image: project1,
-            link: "#"
+            title: "November - Static Template",
+            // description: 'I developed a project titled "November Template" using HTML for structuring the content and CSS for styling, showcasing web development concepts to deliver a visually appealing and user-friendly experience.',
+            image: NovemberStaticTemplate,
+            link: "https://saikiran-avusula.github.io/Projects-Git/November%20template/november.html"
         },
     ]
+
     return (
         <>
             <div id='projects' className='py-12'>
@@ -33,12 +37,16 @@ const Projects = () => {
                     <p className='mb-12 text-gray-400 text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero praesentium modi itaque, aperiam totam consequuntur quia nesciunt similique temporibus dolores. Iure ipsum adipisci, delectus praesentium quae doloribus placeat modi minima?</p>
                     <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
                         {projects.map((eachProject) => (
-                            <div key={eachProject.id} className='bg-gray-900 shawdow-lg rounded-lg overflow-hidden '>
+                            <div key={eachProject.id} className='shawdow-lg rounded-lg overflow-hidden backdrop-blur bg-black/1 hover:border border-white cursor-pointer'>
                                 <img src={eachProject.image} alt={eachProject.title} className='w-full h-48 object-cover' />
                                 <div className='p-6'>
                                     <h2 className='text-xl text-white font-semibold mb-2'>{eachProject.title}</h2>
                                     <p className='text-slate-400 mb-4'>{eachProject.description}</p>
-                                    <button className='border-2 border-red-500 text-red-500 px-4 py-2 rounded-full hover:bg-red-500 hover:text-white trasition'>Details</button>
+                                    <button className='border-2 border-red-500 text-red-500 px-4 py-2 rounded-full hover:bg-red-500 hover:text-white trasition'>
+                                        <a href={eachProject.link} title={eachProject.title}>
+                                            Details
+                                        </a>
+                                    </button>
                                 </div>
                             </div>)
                         )}

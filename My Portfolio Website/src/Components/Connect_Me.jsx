@@ -1,4 +1,4 @@
-// import {}
+
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdAttachEmail } from "react-icons/md";
 
@@ -54,41 +54,7 @@ export default function Connect_Me() {
             {/* <div className="grid"> */}
 
 
-            {/* <div className="flex items-center space-x-4">
-                        <div className="bg-red-500 p-4 rounded-full">
-                            <FaPhoneAlt className="text-white w-6 h-6" />
-                        </div>
-
-                        <div>
-                            <p className="text-lg font-medium text-red-500 ">Call me</p>
-                            <p className="text-white">985235454545</p>
-                        </div>
-                    </div>
-
-                    <div className="flex items-center space-x-4">
-                        <div className="bg-red-500 p-4 rounded-full">
-                            <FaPhoneAlt className="text-white w-6 h-6" />
-                        </div>
-                        <div>
-                            <p className="text-lg font-medium text-red-500 ">Email</p>
-                            <p className="text-white">saikiranavusula89@gmail.com</p>
-                        </div>
-                    </div>
-
-                    <div className="flex items-center space-x-4">
-                        <div className="bg-red-500 p-4 rounded-full">
-                            <FaPhoneAlt className="text-white w-6 h-6" />
-                        </div>
-                        <div>
-                            <p className="text-lg font-medium text-red-500 ">Address</p>
-                            <p className="text-white">KPHB, Kukatpally, Hyderabad - 500072</p>
-                        </div>
-                    </div> */}
-
-
-            {/* </div> */}
-
-            {/* from start */}
+            {/* form start */}
             {/* <form action="" className="space-y-4 text-white">
                         <div className="grid grid-cols-2 gap-4">
                             <input type="text" placeholder="Full Name" className="border border-red-500 bg-gray-500  p-4 rounded-md w-full" />
