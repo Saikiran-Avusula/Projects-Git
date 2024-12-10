@@ -39,7 +39,7 @@ const Navbar = () => {
         <>
             <div>
                 <div id="navbar" className="Navbar">
-                    <div className=" mx-auto hidden md:flex justify-evenly py-3 items-center border rounded-full backdrop-blur bg-black/1">
+                    <div className=" mx-auto hidden md:flex justify-evenly py-3 items-center border rounded-full backdrop-blur bg-black-100 ">
                         <div className="text-xl lg:text-2xl font-bold flex items-center gap-1">
                             <a href="" title="Sai Kiran Avusula Portfolio">
                                 <span className="text-white">My</span>
@@ -76,7 +76,7 @@ const Navbar = () => {
                             </div>
 
                             {menu && (
-                                <div className="flex flex-col p-6 justify-space items-center backdrop-blur-lg bg-black/80 h-screen rounded-r-lg">
+                                <div className="flex flex-col p-6 justify-space items-center backdrop-blur-lg bg-white/80 h-screen rounded-r-lg">
                                     <ul className="space-y-6 text-white text-lg text-center">
                                         {textItems.map(({ id, text, to }) =>
                                             <li key={id} className=" hover:text-red-500 cursor-pointer duration-300">
