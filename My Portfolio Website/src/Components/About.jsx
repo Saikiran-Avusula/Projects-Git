@@ -14,7 +14,7 @@ const About = () => {
                         </div>
 
                         <p className='md:w-1/2 text-gray-400 px-4 md:px-0 text-base sm:text-lg md:text-xl' >
-                            Hey! I’m Sai Kiran Avusula, a Computer Science graduate from 2022, having experience in both corporate and startup nivronements. Skilled in HTML, CSS, JavaScript, React.js, and Bootstrap, I have also delivered successful projects. With a strong passion for IT, I’m enthusiastic about learning and adapting to new technologies to make valuable contributions.
+                            Hey! I’m Sai Kiran Avusula, a Computer Science graduate from 2022, having experience in both corporate and startup enivronements. Skilled in HTML, CSS, JavaScript, React.js, and Bootstrap, I have also delivered successful projects. With a strong passion for IT, I’m enthusiastic about learning and adapting to new technologies to make valuable contributions.
                         </p>
                     </div>
                 </div>
