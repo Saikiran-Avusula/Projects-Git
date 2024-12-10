@@ -37,7 +37,7 @@ const Projects = () => {
                     <p className='mb-12 text-gray-400 text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero praesentium modi itaque, aperiam totam consequuntur quia nesciunt similique temporibus dolores. Iure ipsum adipisci, delectus praesentium quae doloribus placeat modi minima?</p>
                     <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
                         {projects.map((eachProject) => (
-                            <div key={eachProject.id} className='shawdow-lg rounded-lg overflow-hidden backdrop-blur bg-black/1 hover:border border-white cursor-pointer'>
+                            <div key={eachProject.id} className='shawdow-lg rounded-lg overflow-hidden backdrop-blur bg-black/1 cursor-pointer'>
                                 <img src={eachProject.image} alt={eachProject.title} className='w-full h-48 object-cover' />
                                 <div className='p-6'>
                                     <h2 className='text-xl text-white font-semibold mb-2'>{eachProject.title}</h2>

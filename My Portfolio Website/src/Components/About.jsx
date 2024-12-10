@@ -14,7 +14,7 @@ const About = () => {
                         </div>
 
                         <p className='md:w-1/2 text-gray-400 px-4 md:px-0 text-base sm:text-lg md:text-xl' >
-                            Hey! ’m Sai Kiran Avusula, a Computer Science graduate from Hyderabad (2022) with experience in corporate and startup environments. At Amoghnya Tech Solutions, I developed dashboards and internal platforms using agile methodologies. During my internship at Cognizant, I gained expertise in front-end development, troubleshooting, and documentation, along with foundational skills in Java, C, and SQL. Proficient in HTML, CSS, JavaScript, React.js, and Bootstrap, I’ve built projects like a Weather App and Portfolio Site. I’m enthusiastic about the IT industry, eager to learn, and adaptable to any programming language or technology required for my role.
+                            Hey! I’m Sai Kiran Avusula, a Computer Science graduate from 2022, having experience in both corporate and startup settings. Skilled in HTML, CSS, JavaScript, React.js, and Bootstrap, I have also delivered successful projects. With a strong passion for IT, I’m enthusiastic about learning and adapting to new technologies to make valuable contributions.
                         </p>
                     </div>
                 </div>
