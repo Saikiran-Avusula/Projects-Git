@@ -77,7 +77,7 @@ const Navbar = () => {
 
                             {menu && (
                                 <div className="flex flex-col p-6 justify-space items-center backdrop-blur-lg bg-white/80 h-screen rounded-r-lg">
-                                    <ul className="space-y-6 text-white text-lg text-center">
+                                    <ul className="space-y-6 text-black text-lg text-center">
                                         {textItems.map(({ id, text, to }) =>
                                             <li key={id} className=" hover:text-red-500 cursor-pointer duration-300">
                                                 <Link to={to} smooth={true} duration={500} offset={-70}>
