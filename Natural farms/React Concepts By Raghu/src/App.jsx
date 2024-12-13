@@ -34,6 +34,7 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import Home from "./components/React Router DOM/Home"
 import Checkout from "./components/React Router DOM/Checkout"
 import Services from "./components/React Router DOM/Services"
+import ProductList from './components/ComponentWIllUnMount/Product Listing(useState , useEffect , fetch api )/ProductList'
 
 
 
@@ -140,6 +141,9 @@ function App() {
           <Route path='/services' element={<Services />} />
         </Routes>
       </BrowserRouter>
+
+      <ProductList />
+
 
     </>
   )
