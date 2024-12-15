@@ -21,16 +21,16 @@ const ProductListing = () => {
         <>
             {/* <h1 style={{ textAlign: 'center', }}>Product List Page</h1> */}
             <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: 2 }}>
-                {products.map(prod =>
+                {products.map(item =>
                     <Product
-                        key={prod.id}
-                        title={prod.title}
-                        price={prod.price}
-                        category={prod.category}
-                        description={prod.description}
-                        image={prod.image}
-                        rating={prod.rating.rate}
-                        stock={prod.rating.count}
+                        key={item.id}
+                        title={item.title}
+                        price={item.price}
+                        category={item.category}
+                        description={item.description}
+                        image={item.image}
+                        rating={item.rating.rate}
+                        stock={item.rating.count}
                     />)
                 }
             </div>

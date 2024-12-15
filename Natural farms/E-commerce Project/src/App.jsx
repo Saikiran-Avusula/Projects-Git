@@ -5,10 +5,16 @@ import Header from './Components/Header'
 import ProductListing from './Components/ProductListing'
 import Cart from './Components/Cart'
 
+
+
+
+
 const App = () => {
   return (
     <>
       <BrowserRouter>
+
+        {/* moved to header component, due to needed in header not in separate*/}
         {/* <nav>
           <li><Link to={'/'}>Home</Link></li>
           <li><Link to={'/cart'}>Cart</Link></li>
@@ -34,10 +40,16 @@ const App = () => {
           </Route>
         </Routes>
       </BrowserRouter >
+
+      {/* <CircleComponent /> */}
     </>
   )
 }
 
 export default App
+
+
+
+
 
 
