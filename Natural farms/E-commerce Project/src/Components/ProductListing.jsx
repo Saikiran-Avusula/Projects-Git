@@ -24,6 +24,7 @@ const ProductListing = () => {
                 {products.map(item =>
                     <Product
                         key={item.id}
+                        id={item.id} //id also should pass as prop to cart.jsx
                         title={item.title}
                         price={item.price}
                         category={item.category}

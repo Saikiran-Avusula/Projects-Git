@@ -11,6 +11,7 @@ export const CartDispatchContext = React.createContext(null)
 
 // for initial state will be empty array
 const initialState = {
+    // Note: In future users informationed logged, added items to cart can be saved & updating
     // 10. but ekada hard coded values tho kakunda, manam choopinche api items add avali
     // "cart: [{}]" //cart count is increased to 1, when hard coded values 
     // 11. dani kosam "Product.jsx" ki velli choodu,
@@ -26,10 +27,32 @@ const initialState = {
 export function Reducer (state, action){
     switch(action.type){
         case "ADD_TO_CART":
-            // always ADD_TO_CART should be return object
+            // always ADD_TO_CART should be return object & updating state cart items
             return {...state.cart, cart: [...state.cart, action.payload]};
-            default:
-                return state;
+          
+        // adding delete item case & disptach action, we can't do directly mutate tha states
+        // Taking a shallow copy and filtering items != to that item 
+        // item!=payload.id (so, it will give remaining items & update with return remaining items as new state)
+        // in simple way, 
+        case "DELETE_FROM_CART": 
+        // 1. Taking copy (state.cart) - we jsut shallow copied cart items 
+        // & filtering & "item.id!= action.payload.id" to that item (using items & action.payload)
+            { 
+                // to optimize this code
+                // const newCart = [...state.cart]
+                // const updatedCart = newCart.filter(item => item.id!= action.payload.id)
+                // from here:
+                const updatedCart = [...state.cart].filter(item => item.id!= action.payload.id)
+                
+                // we are returning cart state, cart updated state
+                return {
+                    ...state,  cart : updatedCart
+                } 
+                
+            }
+            
+        default:
+            return state;
     }
 }
 
