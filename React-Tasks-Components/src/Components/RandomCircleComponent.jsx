@@ -7,7 +7,7 @@ const RandomCircleComponent = () => {
 
   const generateCircle = (event) => {
     // if 2 circles in screen, it will be cleared from screen else moves to else block
-    if (circle.length > 2) {
+    if (circle.length >= 2) {
       console.log("cleared scrren");
       setCircle([]); // Clear all circles if there are already 2
       // setCount(count + 1)
