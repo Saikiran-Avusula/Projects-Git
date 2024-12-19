@@ -3,13 +3,14 @@ import { useState, useEffect } from "react";
 const RandomCircleComponent = () => {
 
   const [circle, setCircle] = useState([])
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
 
   const generateCircle = (event) => {
-    if (circle.length >= 2) {
+    // if 2 circles in screen, it will be cleared from screen else moves to else block
+    if (circle.length > 2) {
       console.log("cleared scrren");
       setCircle([]); // Clear all circles if there are already 2
-      setCount(count + 1)
+      // setCount(count + 1)
     }
     else {
       const randomRadius = Math.floor(Math.random() * 181) + 20; // random radius
@@ -23,15 +24,12 @@ const RandomCircleComponent = () => {
   useEffect(() => {
     window.addEventListener("click", generateCircle);
     // const a = window.addEventListener("click", generateCircle);
-
-
     // cleanup function
     return () => {
       window.removeEventListener('click', generateCircle);
       console.log("clean up executed");
     }
   })
-
 
   // random generated pixel values
   useEffect(() => {
@@ -61,9 +59,8 @@ const RandomCircleComponent = () => {
               borderColor: 'blue',
               backgroundColor: 'red',
               cursor: 'pointer'
-            }}
-          >
-            <h1>{`${circle.length}`} </h1>
+            }}>
+            {/* <h1>{`${circle.length}`} </h1> */}
           </div>
         )
       })}
