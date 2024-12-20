@@ -4,8 +4,9 @@ import { useState } from "react";
 import { CgMenu } from "react-icons/cg";
 import { IoClose } from "react-icons/io5";
 import { motion } from 'motion/react';
-// import { resume } from '../assets/Sai Kiran Avusula Resume (E).pdf'
 import { Link } from 'react-scroll'
+import NavBarResumeButton from "./Buttons/NavBarResumeButton";
+
 
 
 const Navbar = () => {
@@ -31,15 +32,13 @@ const Navbar = () => {
         { id: 4, text: "Connect Me", to: "connect_me" }
     ]
 
-    const resumeHandlerButton = () => {
-        window.open('/Sai Kiran Avusula Rssume (E).pdf', '_blank')
-    }
+
 
     return (
         <>
             <div>
                 <div id="navbar" className="Navbar">
-                    <div className=" mx-auto hidden md:flex justify-evenly py-3 items-center border rounded-full backdrop-blur bg-black-100 ">
+                    <div className=" mx-auto hidden md:flex justify-evenly py-3 items-center border rounded-full backdrop-blur bg-black-100">
                         <div className="text-xl lg:text-2xl font-bold flex items-center gap-1">
                             <a href="" title="Sai Kiran Avusula Portfolio">
                                 <span className="text-white">My</span>
@@ -62,7 +61,11 @@ const Navbar = () => {
                                 </ul>
                             </div>
                         </div>
-                        <a href='' onClick={resumeHandlerButton} title='View My Resume' className=" md:text-base lg:text-lg bg-red-500 hover:bg-white hover:text-red-500 text-white px-4 py-2 rounded-full duration-500" >My Resume</a>
+
+                        {/* Resume Button */}
+                        <div>
+                            <NavBarResumeButton />
+                        </div>
                     </div>
                 </div>
 
@@ -76,8 +79,8 @@ const Navbar = () => {
                             </div>
 
                             {menu && (
-                                <div className="flex flex-col p-6 justify-space items-center backdrop-blur-lg bg-white/80 h-screen rounded-r-lg">
-                                    <ul className="space-y-6 text-black text-lg text-center">
+                                <div className="flex flex-col p-6 justify-space items-center backdrop-blur-lg bg-white/80 h-screen rounded-r-lg ">
+                                    <ul className="space-y-6 text-black text-lg text-center pb-5">
                                         {textItems.map(({ id, text, to }) =>
                                             <li key={id} className=" hover:text-red-500 cursor-pointer duration-300">
                                                 <Link to={to} smooth={true} duration={500} offset={-70}>
@@ -85,7 +88,7 @@ const Navbar = () => {
                                                 </Link>
                                             </li>)}
                                     </ul>
-                                    <a onClick={resumeHandlerButton} className="text-lg bg-red-500 hover:bg-white hover:text-red-500 text-white px-2 py-1 mt-6 rounded-full duration-500 download" title="View My Download">My Resume</a>
+                                    <NavBarResumeButton />
                                 </div>
                             )}
                         </motion.div>

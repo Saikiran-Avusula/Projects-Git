@@ -6,6 +6,8 @@ import Navbar from "./Components/Navbar";
 import Skills from "./Components/Skills";
 import Projects from "./Components/Projects";
 
+
+
 const App = () => {
   return (
     <>

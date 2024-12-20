@@ -1,6 +1,7 @@
 import avatar from '../assets/kiranAIImage.png'
 import { Link } from 'react-scroll'
-
+import HireMeButton from './Buttons/HireMeButton'
+import MyStoryButton from './Buttons/MyStoryButton'
 // import { motion } from 'react'
 
 const Main = () => {
@@ -16,16 +17,18 @@ const Main = () => {
                     <p className="text-gray-400 text-2xl  mb-8 ">A Passionate Web Developer</p>
 
                     <div className="flex justify-center space-x-4 mb-10">
-                        <button className="bg-red-500 text-white px-6 py-3 rounded-full">
+                        <div>
                             <Link to='connect_me' smooth={true} duration={500} offset={-70} >
-                                Hire Me
+                                <HireMeButton />
                             </Link>
-                        </button>
-                        <button className="text-white border border-white px-6 py-3 rounded-full">
+                        </div>
+
+                        <div>
                             <Link to='about' smooth={true} duration={500} offset={-70} >
-                                My Story
+                                <MyStoryButton />
                             </Link>
-                        </button>
+                        </div>
+
                     </div>
                 </div>
             </div>
