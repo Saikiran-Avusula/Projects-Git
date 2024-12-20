@@ -1,11 +1,9 @@
 
-
-
 import WeatherApp from '/WeatherApp.png';
 import WaterReminderApp from '/WaterReminderApp.png';
 import NovemberStaticTemplate from '/NovemberStaticTemplate.png';
 
-const CardProject = () => {
+const ProjectCard = () => {
     const projects = [
         {
             id: 1,
@@ -77,4 +75,4 @@ const CardProject = () => {
     );
 }
 
-export default CardProject;
+export default ProjectCard;

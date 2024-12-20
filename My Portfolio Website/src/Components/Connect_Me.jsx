@@ -3,7 +3,6 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { MdAttachEmail } from "react-icons/md";
 
 
-
 export default function Connect_Me() {
     return (
         <div id="connect_me" className="grid">
