@@ -1,3 +1,0 @@
-[submodule "IMDB-clone-ReactApp"]
-    path = IMDB-clone-ReactApp
-    url = https://github.com/username/IMDB-clone-ReactApp.git
