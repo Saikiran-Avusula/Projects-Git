@@ -1,4 +1,5 @@
 import RootLayout from "../Layout-Section/RootLayout";
+import TopSearchCards from "./TopSearchCards";
 
 const TopSearch = () => {
     return (
@@ -17,8 +18,12 @@ const TopSearch = () => {
 
                 {/* Top Search tickets routes cards */}
                 <div className="w-full grid grid-cols-3 gap-5">
-
-
+                    <TopSearchCards routeForm={"Kathmandu"} routeTo={"Pyuthan"} timeDuration={"10 Hrs"} price={"1600"} />
+                    <TopSearchCards routeForm={"Pokhara"} routeTo={"Pyuthan"} timeDuration={"8 Hrs"} price={"1300"} />
+                    <TopSearchCards routeForm={"Kathmandu"} routeTo={"Lumbini"} timeDuration={"20 Hrs"} price={"2200"} />
+                    <TopSearchCards routeForm={"Kathmandu"} routeTo={"Chitwan"} timeDuration={"6 Hrs"} price={"1000"} />
+                    <TopSearchCards routeForm={"Pokhara"} routeTo={"Pyuthan"} timeDuration={"16 Hrs"} price={"2000"} />
+                    <TopSearchCards routeForm={"Pokhara"} routeTo={"Pyuthan"} timeDuration={"8 Hrs"} price={"1400"} />
                 </div>
             </RootLayout>
         </>

@@ -6,6 +6,7 @@ import Navbar from './componenets/Navbar-section/Navbar';
 import Service from './componenets/Service-Section/Service';
 import About from './componenets/About-section/About';
 import Tickets from './componenets/Tickets-Section/Tickets';
+import Footer from './componenets/Footer-Section/Footer';
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
 
           {/* Footer */}
           {/* This is Footer section */}
+          <Footer />
         </main>
       </Router>
     </>

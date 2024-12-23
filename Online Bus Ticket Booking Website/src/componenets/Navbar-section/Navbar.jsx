@@ -53,14 +53,14 @@ const Navbar = () => {
     return (
         <>
             <nav
-                className={`w-full fixed h-[8ch] top-0 left-0 lg:px-24 md:px-16 sm:px-7 px-4 backdrop-blur-lg transition-transform duration-300 z-50
+                className={`w-full border-bg-gray-500 shadow-sm fixed h-[8ch] top-0 left-0 lg:px-24 md:px-16 sm:px-7 px-4 backdrop-blur-lg transition-transform duration-300 z-50
             ${isVisible ? "translate-y-0" : "-translate-y-full"}
-            ${scrollPosition > 50 ? "bg-yellow-500 shadow-md" : "bg-neutral-100/10"}`}
+            ${scrollPosition > 50 ? "bg-black/10 backdrop-blur-md shadow-md" : "bg-neutral-100/10"}`}
             >
                 <div className="w-full h-full flex items-center justify-between">
 
                     {/* Logo section */}
-                    <Link to='/' className='text-4xl text-primary font-bold'>
+                    <Link to='/' className='text-4xl text-red-500 font-bold'>
                         Bus
                     </Link>
 
