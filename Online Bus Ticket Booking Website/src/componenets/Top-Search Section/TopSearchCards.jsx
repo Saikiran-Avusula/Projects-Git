@@ -9,11 +9,11 @@ const TopSearchCards = ({ routeForm, routeTo, timeDuration, price }) => {
 
     return (
         <>
-            <div className="w-full rounded-xl p-5 border-2 border-netiural-300 space-y-10">
+            <div className="w-full rounded-xl p-5 border-2 border-neutral-300 space-y-10">
 
                 {/* Routes From and To */}
                 <div className="space-y-3.5 w-full">
-                    
+
                     {/* Route */}
                     <div className="space-y-0">
                         {/* Labels */}

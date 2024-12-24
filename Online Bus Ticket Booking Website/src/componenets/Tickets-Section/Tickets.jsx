@@ -1,12 +1,52 @@
+import TopLayout from "../Top-Page-Layout/TopLayout";
+import BusSeatsPhoto from "../../assets/bus-seats-photo.jpg";
+import RootLayout from "../Layout-Section/RootLayout";
+import { motion } from "framer-motion";
+import Search from "../Home-Section/Search";
+import Filter from "../Filter-Section/Filter";
+
+
 const Tickets = () => {
     return (
         <>
-            <div className="h-screen w-full flex items-center justify-center">
-                <h1 className="text-5xl text-neutral-950 font-bold">
-                    Tickets section page
-                </h1>
-            </div>
+            <div className="w-full space-y-12 py-16">
+                {/* Top Layout */}
+                <TopLayout className={"py-20"}
+                    bgImg={BusSeatsPhoto}
+                    title={"Reserve Your Tickets"}
+                />
 
+                <RootLayout className="spacey-12 relative">
+
+                    {/* Search section */}
+                    {/* Fixing this section  on top to be sticky so thatwe can esily chnage the route */}
+
+                    <div className="space-y-5 w-full bgneutral-50 flex py-4 items-center justify-center flex-col sticky top-0 z-30">
+                        <motion.h1
+                            initial={{ opacity: 0, y: -50 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.85, ease: "easeInOut" }}
+                            className="text-3xl sm:text-4 xl lg:text-3xl text-neutral-700 font-semibold capitalize leading-tight"
+                        >
+                            Want to Change the Route ?
+                        </motion.h1>
+                    </div>
+
+
+                    {/* Search  from home of Navbar*/}
+                    <Search />
+
+                    {/* Search bus ticket */}
+                    <div className="w-full h-auto grid grid-cols-4 gap-16 relative my-6">
+
+                        {/* Filter section */}
+                        <div className="col-span-1">
+                            <Filter className="space-4-4 sticky top-52" />
+                        </div>
+                    </div>
+
+                </RootLayout>
+            </div>
         </>
     )
 }
