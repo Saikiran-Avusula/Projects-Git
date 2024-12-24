@@ -21,7 +21,7 @@ const PriceRangeSlider = ({
     onChange,
     rangeColor = "#ff0303",
     valueStyle = valueCSS,
-    width = "300px",
+    width = "250px",
     currencyText = "$",
 }) => {
 
@@ -69,18 +69,18 @@ const PriceRangeSlider = ({
     }, [minVal, maxVal, onChange]);
 
     return (
-        <div className='w-full flex items-center justify-center flex-col space-y-14'>
+        <div className='w-full flex items-center justify-center flex-col space-y-10'>
 
             {/* Display Price Value */}
-            <div className="w-[300px] px-4 flex items-center justify-between gap-x-5">
+            <div className="w-[250px] px-4 flex items-center justify-between gap-x-5">
 
-                <p className="text-xl text-neutral-100 font-semibold">
+                <p className="text-xl text-neutral-600 font-semibold">
                     {currencyText} {minVal}
                 </p>
 
                 <div className="flex-1 border-dashed border border-neutral-500 mt-1"></div>
 
-                <p className="text-xl text-neutral-100 font-semibold">
+                <p className="text-xl text-neutral-600 font-semibold">
                     {currencyText} {maxVal}
                 </p>
 
@@ -122,9 +122,9 @@ const PriceRangeSlider = ({
                     }}
                 />
 
-                <div className="slider">
+                <div className="slider pb-5">
                     <div
-                        style={{ backgroundColor: trackColor }}
+                        style={{ border: `1px solid ${trackColor}` }}
                         className="track-slider"
                     />
 

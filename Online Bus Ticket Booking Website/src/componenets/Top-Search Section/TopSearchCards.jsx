@@ -4,7 +4,7 @@ import { IoTv } from "react-icons/io5";
 import PropTypes from 'prop-types';
 
 
-const TopSearchCards = ({ routeForm, routeTo, timeDuration, price }) => {
+const TopSearchCards = ({ routeFrom, routeTo, timeDuration, price }) => {
 
 
     return (
@@ -30,7 +30,7 @@ const TopSearchCards = ({ routeForm, routeTo, timeDuration, price }) => {
                         <div className="w-full flex items-center justify-between gap-x-3">
                             {/* From route */}
                             <h1 className="text-xl text-neutral-600 font-semibold">
-                                {routeForm}
+                                {routeFrom}
                             </h1>
 
                             {/* Dotted line with timeDuration */}
@@ -69,7 +69,7 @@ const TopSearchCards = ({ routeForm, routeTo, timeDuration, price }) => {
                         <div className="flex items-center gap-x-1">
                             <GiWaterBottle className="w-3 h-3 text-neutral-500" />
                             <p className="text-xx text-neutral-600 font-normal">
-                                Snaks
+                                Snacks
                             </p>
                         </div>
 
@@ -110,7 +110,7 @@ const TopSearchCards = ({ routeForm, routeTo, timeDuration, price }) => {
     )
 }
 TopSearchCards.propTypes = {
-    routeForm: PropTypes.string.isRequired,
+    routeFrom: PropTypes.string.isRequired,
     routeTo: PropTypes.string.isRequired,
     timeDuration: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,

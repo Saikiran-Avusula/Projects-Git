@@ -7,8 +7,10 @@ import Service from './componenets/Service-Section/Service';
 import About from './componenets/About-section/About';
 import Tickets from './componenets/Tickets-Section/Tickets';
 import Footer from './componenets/Footer-Section/Footer';
+import Details from './componenets/Tickets-Section/Details-Section/Details';
 
 const App = () => {
+
   return (
     <>
       <Router>
@@ -20,6 +22,9 @@ const App = () => {
             <Route path='/about' element={<div> <About /></div>} />
             <Route path='/service' element={<div> <Service /></div>} />
             <Route path='/bus-tickets' element={<div> <Tickets /></div>} />
+            
+            {/* Details */}
+            <Route path='/bus-tickets/detail' element={<div> <Details /></div>} />
           </Routes>
 
           {/* Footer */}

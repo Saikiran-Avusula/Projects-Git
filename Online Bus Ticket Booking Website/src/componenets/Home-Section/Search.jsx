@@ -9,7 +9,7 @@ const Search = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -800 }}
             transition={{ duration: 0.85, ease: "easeInOut" }}
-            className="w-full bg-neutral-50/20 border border-neutral-500 shadow-lg rounded-xl p-4"
+            className="w-full bg-neutral-50/20 border border-neutral-500 shadow-lg rounded-xl p-4 bg-white"
         >
             {/* Flex container with responsive wrapping */}
             <div className="flex flex-wrap lg:flex-nowrap items-center gap-5 justify-between w-full">
