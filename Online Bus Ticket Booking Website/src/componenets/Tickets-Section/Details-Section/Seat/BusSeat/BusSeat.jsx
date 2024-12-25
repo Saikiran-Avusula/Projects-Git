@@ -295,7 +295,7 @@ const BusSeat = () => {
                                     Processed to Chekout
                                 </button>
                                 <small className="text-xs text-neutral-600 font-normal px-1">
-                                    Please select at least one seat to proceed to checkout.
+                                    Please select atleast one seat to proceed to checkout.
                                 </small>
                             </div>
                     }

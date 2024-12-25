@@ -8,6 +8,8 @@ import About from './componenets/About-section/About';
 import Tickets from './componenets/Tickets-Section/Tickets';
 import Footer from './componenets/Footer-Section/Footer';
 import Details from './componenets/Tickets-Section/Details-Section/Details';
+import CheckOut from './componenets/Tickets-Section/checkout/CheckOut';
+// import CheckOut from './componenets/Tickets-Section/checkout/CheckOut';
 
 const App = () => {
 
@@ -22,7 +24,8 @@ const App = () => {
             <Route path='/about' element={<div> <About /></div>} />
             <Route path='/service' element={<div> <Service /></div>} />
             <Route path='/bus-tickets' element={<div> <Tickets /></div>} />
-            
+            <Route path='/bus-tickets/checkout' element={<div><CheckOut /></div>} />
+
             {/* Details */}
             <Route path='/bus-tickets/detail' element={<div> <Details /></div>} />
           </Routes>
