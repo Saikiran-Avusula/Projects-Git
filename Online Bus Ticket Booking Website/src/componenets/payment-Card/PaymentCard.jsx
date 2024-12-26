@@ -9,37 +9,39 @@ const PaymentCard = ({ selectedPayment, value, onChange,
     return (
         <div>
             <label htmlFor="cardsPayments"
-                className={`w-full flex items-end px-5 py-2 border-2 
-                ${selectedPayment == value ? "border-indigo-500/80 bg-indigo-500/15"
-                        : "border-neutral-300 bg-neutral-100/40"} rounded-xl relative cursor-pointer`}
+                className={`w-full flex items-center border-2
+                ${selectedPayment == value ? "border-red-500/80 bg-red-200/15"
+                        : "border-red-300 bg-neutral-100/40"} rounded-xl relative cursor-pointer`}
                 onClick={() => onChange({ target: { value } })}
             >
                 <div className="w-full flex items-center justify-between gap-7">
-                    <div className="flex items-center gapx-3"></div>
+                    <div className="flex items-center gap-x-3"></div>
                     <div className="flex items-center justify-center">
-                        <div className="w-fit h-16 rounded-lg pr-5 ">
+                        <div className="w-fit h-16 rounded-lg">
                             <img src={cardImage} alt="payment img"
-                                className="w-fit h-full object-contain object-center rounded-lg" />
+                                className="w-fit h-full object-contain pr-2 object-center rounded-lg" />
                         </div>
 
                         <div className="space-y-0.5">
-                            <h1 className=" text-base neutral-600 font-medium">
+                            <h1 className="text-base neutral-600 font-medium text-sm px-5">
                                 {cardholderName}
                             </h1>
-                            <p className="text-neutral-500 text-sm font-normal">
+                            <p className="text-neutral-500 text-sm text-center font-normal">
                                 **** {cardNum.slice(-4)}
                             </p>
                         </div>
 
-                        <div className="flex items-center justify-center px-4">
+                        <div className="flex items-center justify-center px-1">
                             {selectedPayment === value ? (
-                                <IoMdRadioButtonOn className='w-7 h-7 text-indigo-500' />
+                                <IoMdRadioButtonOn className='w-7 h-7 text-red-500' />
                             ) : (
                                 <IoMdRadioButtonOff className='w-7 h-7' />
                             )}
                         </div>
                     </div>
                 </div>
+
+                {/* radio button */}
                 <input type="radio" value={value}
                     checked={selectedPayment === value}
                     onChange={onChange} className="hidden" />

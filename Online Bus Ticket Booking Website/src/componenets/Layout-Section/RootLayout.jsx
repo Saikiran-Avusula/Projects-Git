@@ -1,6 +1,7 @@
 import { useEffect } from "react";
+import PropTypes from 'prop-types';
 
-const RootLayout = ({children, className}) => {
+const RootLayout = ({ children, className }) => {
 
     // automatically scroll to top when route you naviagate to another page or new page
     useEffect(() => {
@@ -9,7 +10,7 @@ const RootLayout = ({children, className}) => {
     return (
         <>
             <div className=
-            {`w-full lg:px-24 md:px-16 sm:px-7 px-4
+                {`w-full lg:px-24 md:px-16 sm:px-7 px-4
             ${className}`}
             >
                 {children}
@@ -17,5 +18,9 @@ const RootLayout = ({children, className}) => {
         </>
     )
 }
+RootLayout.propTypes = {
+    children: PropTypes.node.isRequired,
+    className: PropTypes.string
+};
 
 export default RootLayout;
