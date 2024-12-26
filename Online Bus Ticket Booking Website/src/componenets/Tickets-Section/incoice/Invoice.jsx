@@ -5,6 +5,7 @@ import { useRef } from "react"
 import { toPng } from "html-to-image"
 import download from "downloadjs"
 import PassengerInvoice from "./passengerInvoice/PassengerInvoice"
+import CompanyInvoice from "./companyInvoice/CompanyInvoice"
 
 
 // installed npm packeage "npm install html-to-image downloadjs" to download invoice card to a png file
@@ -43,6 +44,7 @@ const Invoice = () => {
                         <PassengerInvoice/>
 
                         {/* right for company */}
+                        <CompanyInvoice/>
 
                         {/* /* cut circle  */}
                                                 <div className="absolute -top-3 right-40 h-6 w-6 
