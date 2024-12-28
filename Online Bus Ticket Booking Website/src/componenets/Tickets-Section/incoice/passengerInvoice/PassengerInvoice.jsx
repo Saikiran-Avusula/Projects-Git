@@ -101,7 +101,7 @@ const PassengerInvoice = () => {
                     </div>
 
                 </div>
-                    <h1>hi</h1>
+             
                 <div className="col-span-1 border border-neutral-200 rounded-xl shadow-sm p-1">
                     <img src={qrCodeImg} alt="QR Code Image" className="w-full aspect-square object-cover object-center rounded-xl" />
                 </div>
