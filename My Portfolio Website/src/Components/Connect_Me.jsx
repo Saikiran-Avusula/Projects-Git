@@ -23,9 +23,9 @@ export default function Connect_Me() {
                     <div className="flex items-center gap-1">
                         <p className="text-lg font-medium text-red-500 ">Connect me:</p>
                         <p className="text-white">
-                            <a href="whatsapp://tel:9866337106" title="click to messgae me">
-                                +91 98663-37106
-                            </a>
+                        <a href="https://wa.me/9866337106?text=Hey%2C%20Let%27s%20connect.%20Sai%20Kiran%20Avusula...%21" title="Click to message me">
+                            +91 98663-37106
+                        </a>
                         </p>
                     </div>
                 </div>

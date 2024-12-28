@@ -4,6 +4,7 @@
 import WeatherApp from '/WeatherApp.png';
 import WaterReminderApp from '/WaterReminderApp.png';
 import NovemberStaticTemplate from '/NovemberStaticTemplate.png';
+import BusBookingApp from '../assets/Bus-booking-app.png'
 
 const ProjectCard = () => {
     const projects = [
@@ -30,6 +31,14 @@ const ProjectCard = () => {
             image: NovemberStaticTemplate,
             link: "https://saikiran-avusula.github.io/Projects-Git/November%20template/november.html",
             Technologies: "HTML, CSS, Java-Script, CSS Modules"
+        },
+        {
+            id: 4,
+            title: "Bus Ticket Booking Application",
+            description: "The Bus Ticket Booking Application is a React-based project that enables users to search, reserve, and manage bus tickets, featuring a responsive interface and checkout process.",
+            image: BusBookingApp,
+            link: "https://bus-ticket-booking-application-tau.vercel.app/",
+            Technologies: "React.js, Tailwind CSS, react-router-DOM, Framer-motion"
         }
     ];
 
